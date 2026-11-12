@@ -1,0 +1,4 @@
+﻿figure_id,source_path,source_sha256,source_rows,note
+figS_governance,data/figure_source/figS_governance_paired_v20.csv,9694ab9be51a4228e4e64bda880ded6827812f2f82527ee8d34a1267f42e3580,13,13-city paired early/late facility means shown in panel a
+figS_governance,data/figure_source/figS_governance_leads_v20.csv,dc20ebb86b8424979e7feea46f2309f624d462e0ccbf4662ca78e260fadcc213,4,four saved pre-policy facility lead estimates shown in panel b
+figS_window_decomposition,data/figure_source/figS_window_contrasts_v20.csv,fa8d58d71755debe1bbfec9dc4ebcfeb7c6af289acd792de0bc8d097d9aeb2ce,15,saved H1/H2 estimates and paired contrasts shown in both panels

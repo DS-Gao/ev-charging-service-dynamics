@@ -1,0 +1,19 @@
+﻿sample,rows,cities,start,end,row_unit,purpose,positive_Q,encoded_zero_Q,membership_rule
+City registry,2672,334,2016,2023,city-year,"Common observation frame, including unavailable charging outcomes",,,
+Facility-observable city-years,890,293,2016,2023,city-year,Facility distribution and compatible-week availability,,,
+Positive-activity city-years,464,123,2016,2023,city-year,Positive activity/intensity distributions,,,
+Continuous 2019-2023 cohort,180,36,2019,2023,city-year,Growth and recorded-week decomposition; positive each year,,,
+Common contribution cities,208,52,2020,2023,city-year in two endpoint pairs,Compare weighted contributions with fixed membership,,,
+Local policy corpus,601,176,2016,2023,documents,Locally applicable policy content,,,
+Documents with requirements,207,88,2016,2023,documents (466 clauses),Nonexclusive operational responsibility functions,,,
+Annual positive facility model,445,104,2016,2023,city-year,Conditional facility-activity association,445.0,0.0,"Positive activity, facility exposure and complete annual controls; singleton groups excluded"
+Annual nonnegative facility model,523,112,2016,2023,city-year,Conditional facility-activity association,453.0,70.0,Nonnegative activity and complete annual controls; all-zero city groups and subsequent singletons excluded
+Annual policy comparison,325,94,2016,2022,city-year,"Recorded R/S exposures, with and without response-index adjustment",325.0,0.0,Estimation observations meeting the stated model-specific eligibility conditions
+Quarterly facility models,1542,111,2017,2023,city-quarter,Conditional facility-activity association,1301.0,241.0,Estimation observations meeting the stated model-specific eligibility conditions
+Quarterly response-index pair,1090,94,2017,2022,city-quarter,Facility-activity association with and without response-index adjustment,924.0,166.0,Common quarterly observations with complete response-index exposure through 2022
+Recorded activity states 2019_2020,47,47,2019,2020,city-window,Fixed two-endpoint comparison retaining source-coded zeros,,,"Both endpoints finite Q>=0, E>0, W>0 and N>0; no model membership or weather filter"
+Recorded activity states 2020_2021,70,70,2020,2021,city-window,Fixed two-endpoint comparison retaining source-coded zeros,,,"Both endpoints finite Q>=0, E>0, W>0 and N>0; no model membership or weather filter"
+Recorded activity states 2021_2022,167,167,2021,2022,city-window,Fixed two-endpoint comparison retaining source-coded zeros,,,"Both endpoints finite Q>=0, E>0, W>0 and N>0; no model membership or weather filter"
+Recorded activity states 2022_2023,225,225,2022,2023,city-window,Fixed two-endpoint comparison retaining source-coded zeros,,,"Both endpoints finite Q>=0, E>0, W>0 and N>0; no model membership or weather filter"
+Growth transition non-overlapping windows,52,52,2020,2023,city-comparison,Same-city category persistence and transitions,,,Cities eligible in both positive-activity growth windows; Other category retained
+Growth transition overlapping windows,73,73,2021,2023,city-comparison,Same-city category persistence and transitions,,,Cities eligible in both positive-activity growth windows; Other category retained

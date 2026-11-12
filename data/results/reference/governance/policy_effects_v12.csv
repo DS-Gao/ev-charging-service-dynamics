@@ -1,0 +1,79 @@
+﻿model_id,target_window,outcome,event_h,estimate,n_city,n_rows,status,inference_status,ci_low,ci_high,se,ci_method
+G_MAIN,dynamic,log_A,-4,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_N,-4,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,delta,-4,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_A,-3,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_N,-3,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,delta,-3,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_A,-2,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_N,-2,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,delta,-2,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_A,-1,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_N,-1,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,delta,-1,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_A,0,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_N,0,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,delta,0,,0,0,not_estimated_formal_pretrend,formal_pretrend_unavailable_in_python_fallback,,,,none
+G_MAIN,dynamic,log_A,1,1.12322255866,10,10,estimated,valid_percentile_CI,-0.560905112173,2.27512913289,0.728109910466,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,1,0.535100042508,10,10,estimated,valid_percentile_CI,-0.0142552277142,0.951109191894,0.244442854865,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,1,0.588122516155,10,10,estimated,valid_percentile_CI,-0.851638691456,1.64718749827,0.656220935091,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,2,1.76200891653,10,10,estimated,valid_percentile_CI,-0.496641955157,3.74598149562,1.08631308949,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,2,0.550730706159,10,10,estimated,valid_percentile_CI,-0.117666679732,1.1982456913,0.338403078376,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,2,1.21127821037,10,10,estimated,valid_percentile_CI,-1.27951825091,3.4171399117,1.19351950832,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,3,2.39808067153,8,8,estimated,valid_percentile_CI,0.0724700390494,4.44517062317,1.12775328448,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,3,0.388355586693,8,8,estimated,valid_percentile_CI,-0.223208132641,0.981277485368,0.308062255928,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,3,2.00972508484,8,8,estimated,valid_percentile_CI,-0.0745066313224,4.0196492729,1.05981833862,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,4,2.95730272612,8,8,estimated,valid_percentile_CI,0.826776145633,4.84021166972,1.07731035679,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,4,1.051360024,8,8,estimated,valid_percentile_CI,0.252117026687,1.98993416943,0.458443759551,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,4,1.90594270212,8,8,estimated,valid_percentile_CI,-0.6582597851,4.09648060246,1.26701240444,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,5,3.54316013907,8,8,estimated,valid_percentile_CI,1.21094626774,5.84311562803,1.20433082099,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,5,1.12620166378,8,8,estimated,valid_percentile_CI,0.291560518317,2.04156563731,0.451962914837,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,5,2.4169584753,8,8,estimated,valid_percentile_CI,-0.31612176367,5.05365786781,1.3988436485,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,6,4.24298778077,8,8,estimated,valid_percentile_CI,1.8008204867,6.4766017234,1.17864227177,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,6,1.173983788,8,8,estimated,valid_percentile_CI,0.302043387911,2.13676616965,0.48125202033,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,6,3.06900399277,8,8,estimated,valid_percentile_CI,0.617940365513,5.54925084857,1.27747080351,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,7,4.19639978287,8,8,estimated,valid_percentile_CI,1.73122752139,6.45221958236,1.18446855224,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,7,1.23494239697,8,8,estimated,valid_percentile_CI,0.381890049642,2.2107194461,0.477959092022,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,7,2.9614573859,8,8,estimated,valid_percentile_CI,0.40936464342,5.50866365373,1.26167097635,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_A,8,4.7162042415,7,7,estimated,valid_percentile_CI,1.97952196502,7.01827225681,1.26574594243,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,log_N,8,1.25763417538,7,7,estimated,valid_percentile_CI,0.275767055262,2.38567493711,0.545895228426,percentile city-cluster pairs bootstrap
+G_MAIN,dynamic,delta,8,3.45857006612,7,7,estimated,valid_percentile_CI,0.855617245163,5.81693322393,1.27516314096,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_A,1,0.293493526406,7,7,estimated,valid_percentile_CI,-0.359055290629,0.74477848876,0.280741284289,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_N,1,0.0951475423065,7,7,estimated,valid_percentile_CI,-0.0332167610342,0.21291149123,0.062741403857,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,delta,1,0.198345984099,7,7,estimated,valid_percentile_CI,-0.431265574575,0.619770172001,0.271558342294,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_A,2,0.605411368781,8,8,estimated,valid_percentile_CI,-0.22256901987,1.22330747148,0.376973592875,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_N,2,0.16159723581,8,8,estimated,valid_percentile_CI,-0.0354679934956,0.401195191132,0.111252915197,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,delta,2,0.443814132971,8,8,estimated,valid_percentile_CI,-0.542626952144,1.14747556776,0.443121171269,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_A,3,0.746998983681,7,7,estimated,valid_percentile_CI,0.288012363888,1.44077829474,0.29191977375,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_N,3,0.104883432037,7,7,estimated,valid_percentile_CI,-0.0257734176414,0.272703203616,0.0762505509208,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,delta,3,0.642115551644,7,7,estimated,valid_percentile_CI,0.198007654948,1.3358132308,0.290261047566,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_A,4,0.732863905223,7,7,estimated,valid_percentile_CI,0.101026690599,1.40072537057,0.335450137792,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,log_N,4,0.268958509053,7,7,estimated,valid_percentile_CI,0.074583158908,0.650717274739,0.150913419271,percentile city-cluster pairs bootstrap
+G_COVID0,H1_available,delta,4,0.46390539617,7,7,estimated,valid_percentile_CI,-0.392795025181,1.20061427724,0.41659759645,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_A,1,0.280689782146,7,7,estimated,valid_percentile_CI,-0.38076534824,0.727003257145,0.281319549437,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_N,1,0.0979002162048,7,7,estimated,valid_percentile_CI,-0.0316560045097,0.223293811368,0.0649333635368,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,delta,1,0.182789565941,7,7,estimated,valid_percentile_CI,-0.460998017232,0.603127076297,0.27323213122,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_A,2,0.604179116331,8,8,estimated,valid_percentile_CI,-0.210340536452,1.21911563027,0.373716406309,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_N,2,0.161862157467,8,8,estimated,valid_percentile_CI,-0.0351398269499,0.402380342138,0.110374759349,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,delta,2,0.442316958864,8,8,estimated,valid_percentile_CI,-0.526600842634,1.13196393107,0.438541157559,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_A,3,0.746557477883,7,7,estimated,valid_percentile_CI,0.29435018584,1.43770473119,0.290957970988,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_N,3,0.104978351263,7,7,estimated,valid_percentile_CI,-0.0278635224323,0.274980774072,0.0761529589477,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,delta,3,0.641579126621,7,7,estimated,valid_percentile_CI,0.198376896699,1.33244702997,0.288759357934,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_A,4,0.738571524848,7,7,estimated,valid_percentile_CI,0.102351394684,1.39721692278,0.333312956467,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,log_N,4,0.267731429284,7,7,estimated,valid_percentile_CI,0.0757574470284,0.651897372329,0.15040290871,percentile city-cluster pairs bootstrap
+G_COVID1,H1_available,delta,4,0.470840095564,7,7,estimated,valid_percentile_CI,-0.384887055912,1.19420862866,0.413564932289,percentile city-cluster pairs bootstrap
+G_MAIN,H1_available,log_A,,1.78966698278,11,36,estimated,valid_percentile_CI,-0.134731923322,3.28628666432,0.859238560077,percentile city-cluster pairs bootstrap
+G_MAIN,H1_available,log_N,,0.700944130565,11,36,estimated,valid_percentile_CI,0.0809862544113,1.25069214476,0.289718699839,percentile city-cluster pairs bootstrap
+G_MAIN,H1_available,delta,,1.08872285221,11,36,estimated,valid_percentile_CI,-0.920088550169,2.76576128514,0.912072104599,percentile city-cluster pairs bootstrap
+G_MAIN,H1_complete,log_A,,2.78946517633,6,24,estimated,valid_percentile_CI,1.15259394231,4.33157905566,0.87617461979,percentile city-cluster pairs bootstrap
+G_MAIN,H1_complete,log_N,,0.569356579821,6,24,estimated,valid_percentile_CI,-0.0922217066908,1.11032798087,0.319579637793,percentile city-cluster pairs bootstrap
+G_MAIN,H1_complete,delta,,2.22010859651,6,24,estimated,valid_percentile_CI,0.703830581804,3.8594297306,0.858306345121,percentile city-cluster pairs bootstrap
+G_MAIN,H2_available,log_A,,4.06336378904,8,31,estimated,valid_percentile_CI,1.67462304477,6.24811647258,1.15453955788,percentile city-cluster pairs bootstrap
+G_MAIN,H2_available,log_N,,1.18428313052,8,31,estimated,valid_percentile_CI,0.341738060404,2.14188061908,0.470192850472,percentile city-cluster pairs bootstrap
+G_MAIN,H2_available,delta,,2.87908065852,8,31,estimated,valid_percentile_CI,0.365779879619,5.38195232143,1.25319792954,percentile city-cluster pairs bootstrap
+G_COVID0,COVID_H1_available,log_A,,2.37876778409,8,29,estimated,valid_percentile_CI,0.0158741641734,4.15700888966,1.08070094439,percentile city-cluster pairs bootstrap
+G_COVID0,COVID_H1_available,log_N,,0.630586719207,8,29,estimated,valid_percentile_CI,0.0488927547019,1.27218144848,0.307290479743,percentile city-cluster pairs bootstrap
+G_COVID0,COVID_H1_available,delta,,1.74818106488,8,29,estimated,valid_percentile_CI,-0.847560594128,3.75491337011,1.20423091277,percentile city-cluster pairs bootstrap
+G_COVID1,COVID_H1_available,log_A,,2.36999790121,8,29,estimated,valid_percentile_CI,0.00889164851963,4.15209866866,1.07879923896,percentile city-cluster pairs bootstrap
+G_COVID1,COVID_H1_available,log_N,,0.632472154218,8,29,estimated,valid_percentile_CI,0.0663238981296,1.27775743152,0.307490045325,percentile city-cluster pairs bootstrap
+G_COVID1,COVID_H1_available,delta,,1.73752574699,8,29,estimated,valid_percentile_CI,-0.874632420846,3.73639106699,1.20157190119,percentile city-cluster pairs bootstrap

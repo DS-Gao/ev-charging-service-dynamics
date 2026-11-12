@@ -1,0 +1,7 @@
+sample_id,scope,rows,cities,years_or_period,rule,public_input_or_result
+annual_positive_candidate,Annual positive-support candidate,464,123,2016-2023,Q>0 and E>0 and W>0,data/processed/annual_service_metrics_v9.csv
+annual_common_model,Annual fixed-effect model sample,445,104,2016-2023,Positive Q/E/W candidate with complete common weather controls and at least two positive years per city,data/results/reference/annual/nonlinear_model_sample_v12.csv
+policy_S_COVID,V11 policy-association sample,325,94,2016-2022,V10 S427 rows through 2022 with compatible-date COVID exposure complete; public file is the frozen eligible input,data/processed/policy_model_input.csv
+quarterly_dynamic,Quarterly dynamic model sample,See saved sample,See saved sample,2016-2023,Bounded quarterly support and lag requirements frozen by V18; no public refit entry is promised,data/results/reference/quarterly/quarterly_dynamic_sample_v18.csv
+record_state,Observation-state membership,See saved membership,See saved membership,2016-2023,Compatible-week and source-coded-zero states retained; no compatible weeks are not treated as zero,data/results/reference/descriptive/record_state_membership.csv
+growth_windows,Prespecified descriptive windows,39/55/77/93 cities for adjacent 2019-2020 through 2022-2023,Window-specific,2019-2023,Positive Q/E/W in every required year; no outcome-dependent regrouping,data/results/recomputed_descriptive/window_membership.csv

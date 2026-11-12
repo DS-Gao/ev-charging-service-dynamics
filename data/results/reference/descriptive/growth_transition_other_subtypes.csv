@@ -1,0 +1,9 @@
+﻿comparison,period,subtype,n,city_keys
+main_52,early,facility_unchanged_activity_contraction,2,岳阳;遂宁
+main_52,early,facility_unchanged_activity_increase,8,咸宁;宜昌;梧州;淮安;萍乡;阿拉善;雅安;黔东南苗族侗族
+main_52,late,facility_unchanged_activity_contraction,1,梧州
+main_52,late,facility_unchanged_activity_increase,1,红河州
+supplement_73,early,facility_unchanged_activity_contraction,4,东莞;咸阳;萍乡;阿拉善
+supplement_73,early,facility_unchanged_activity_increase,7,云浮;亳州;宜昌;宿迁;岳阳;梧州;黔东南苗族侗族
+supplement_73,late,facility_unchanged_activity_contraction,1,梧州
+supplement_73,late,facility_unchanged_activity_increase,1,红河州

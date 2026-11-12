@@ -1,0 +1,232 @@
+﻿model_target,event_h,city_key,n_city_quarters,n_target_cities,city_weight,within_city_weight,row_weight,support_rule
+dynamic,-4,东莞,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-4,宜春,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-4,成都,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-4,武汉,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-4,海口,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-4,福州,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-4,绍兴,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,宜春,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,海口,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-3,绍兴,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,宜春,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,海口,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-2,绍兴,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,东莞,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,厦门,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,宜春,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,成都,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,杭州,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,武汉,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,海口,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,温州,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,福州,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,绍兴,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,-1,苏州,1,11,0.0909090909091,1,0.0909090909091,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,东莞,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,厦门,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,宜春,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,成都,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,武汉,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,海口,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,温州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,福州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,绍兴,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,0,苏州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,东莞,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,宜春,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,成都,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,武汉,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,海口,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,温州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,湖州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,福州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,绍兴,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,1,苏州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,东莞,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,厦门,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,宜春,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,成都,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,武汉,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,海口,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,温州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,湖州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,福州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,2,苏州,1,10,0.1,1,0.1,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,厦门,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,宜春,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,3,苏州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,厦门,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,湖州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,4,苏州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,厦门,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,湖州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,5,苏州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,厦门,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,湖州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,6,苏州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,东莞,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,厦门,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,成都,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,武汉,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,温州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,湖州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,福州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,7,苏州,1,8,0.125,1,0.125,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,东莞,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,厦门,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,成都,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,武汉,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,湖州,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,福州,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+dynamic,8,苏州,1,7,0.142857142857,1,0.142857142857,dynamic h-specific city equal; one city-quarter when available
+H1_available,1,东莞,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,东莞,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,3,东莞,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,4,东莞,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,厦门,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,3,厦门,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,4,厦门,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,1,宜春,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,2,宜春,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,3,宜春,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,1,成都,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,成都,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,3,成都,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,4,成都,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,1,武汉,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,武汉,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,3,武汉,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,4,武汉,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,1,海口,2,11,0.0909090909091,0.5,0.0454545454545,window support frozen over all h; city equal after within-city equal
+H1_available,2,海口,2,11,0.0909090909091,0.5,0.0454545454545,window support frozen over all h; city equal after within-city equal
+H1_available,1,温州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,温州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,3,温州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,4,温州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,1,湖州,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,2,湖州,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,4,湖州,3,11,0.0909090909091,0.333333333333,0.030303030303,window support frozen over all h; city equal after within-city equal
+H1_available,1,福州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,福州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,3,福州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,4,福州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,1,绍兴,1,11,0.0909090909091,1,0.0909090909091,window support frozen over all h; city equal after within-city equal
+H1_available,1,苏州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,2,苏州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,3,苏州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_available,4,苏州,4,11,0.0909090909091,0.25,0.0227272727273,window support frozen over all h; city equal after within-city equal
+H1_complete,1,东莞,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,2,东莞,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,3,东莞,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,4,东莞,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,1,成都,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,2,成都,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,3,成都,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,4,成都,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,1,武汉,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,2,武汉,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,3,武汉,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,4,武汉,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,1,温州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,2,温州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,3,温州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,4,温州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,1,福州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,2,福州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,3,福州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,4,福州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,1,苏州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,2,苏州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,3,苏州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H1_complete,4,苏州,4,6,0.166666666667,0.25,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H2_available,5,东莞,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,东莞,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,东莞,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,东莞,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,5,厦门,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,厦门,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,厦门,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,厦门,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,5,成都,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,成都,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,成都,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,成都,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,5,武汉,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,武汉,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,武汉,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,武汉,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,5,温州,3,8,0.125,0.333333333333,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H2_available,6,温州,3,8,0.125,0.333333333333,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H2_available,7,温州,3,8,0.125,0.333333333333,0.0416666666667,window support frozen over all h; city equal after within-city equal
+H2_available,5,湖州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,湖州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,湖州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,湖州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,5,福州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,福州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,福州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,福州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,5,苏州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,6,苏州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,7,苏州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+H2_available,8,苏州,4,8,0.125,0.25,0.03125,window support frozen over all h; city equal after within-city equal
+COVID_H1_available,1,东莞,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,东莞,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,东莞,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,东莞,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,厦门,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,厦门,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,厦门,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,1,成都,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,成都,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,成都,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,成都,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,1,武汉,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,武汉,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,武汉,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,武汉,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,1,温州,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,温州,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,温州,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,1,湖州,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,湖州,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,湖州,3,8,0.125,0.333333333333,0.0416666666667,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,1,福州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,福州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,福州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,福州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,1,苏州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,2,苏州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,3,苏州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal
+COVID_H1_available,4,苏州,4,8,0.125,0.25,0.03125,same frozen H1 target cities after 2016--2022 finite COVID-index intersection; city equal then within-city equal

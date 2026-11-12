@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this research-materials release when reusing the code or derived materials. Manuscript and third-party source citations are separate."
+title: "Electric vehicle charging service dynamics: research materials"
+type: software
+authors:
+  - family-names: Gao
+    given-names: Dongsheng
+version: 1.0.0
+date-released: 2026-11-12
+repository-code: "https://github.com/DS-Gao/ev-charging-service-dynamics"
+url: "https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.0.0"
+license: MIT
+abstract: "Research code and materials for a city-level study of electric vehicle charging facility expansion, recorded activity and operational policy responsibilities. MIT applies to original code; manuscript and original statistical materials use CC BY 4.0; third-party materials retain their source terms."

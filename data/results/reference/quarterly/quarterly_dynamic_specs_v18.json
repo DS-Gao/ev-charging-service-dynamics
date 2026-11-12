@@ -1,0 +1,72 @@
+{
+  "status": "fixed before quarterly fitting; this is an analysis specification record, not an original preregistration",
+  "support_rule_revision": "The first saved attempt exposed a singleton full-calendar-quarter FE in the candidate support; the fixed implementation now iterates city/quarter all-zero and singleton removal to stability before the repaired fit.",
+  "created_utc": "2026-11-10T05:25:52.946698+00:00",
+  "source_panel": "not included; saved quarterly sample is data/results/reference/quarterly/quarterly_dynamic_sample_v18.csv",
+  "source_panel_sha256": "d496a021d77e13aeaf0f057c990329fec5b7f9c4ce4483c25b793beb933588d8",
+  "skeleton": "334-city x 32 natural calendar quarters",
+  "candidate_rule": {
+    "current": "finite Q >= 0, finite E > 0, finite W > 0",
+    "facility_levels": "finite N > 0 at t,t-1,t-2,t-3",
+    "lag_link": "exact city_key and quarter_period_ordinal - lag = 1,2,3; no post-drop shift",
+    "lag_outcomes": "Q at lag quarters need not be observed or positive"
+  },
+  "main_support_rule": {
+    "all_zero_fe": "remove candidate cities whose candidate Q sum is zero",
+    "singleton": "after the candidate city all-zero rule, iteratively remove every city or full-calendar-quarter FE group with one row; the same rule is reapplied until stable",
+    "separation": "run an LP existence diagnostic and iteratively remove city/quarter FE groups that are all-zero or singleton; no coefficient truncation",
+    "common_support": "D0, D1, and D3 use one final estimable support and one FE structure"
+  },
+  "models": {
+    "D0": "theta0*x_t, theta0 = beta0",
+    "D1": "theta1*x_{t-1} + delta0*(x_t-x_{t-1}); beta0=delta0, beta1=theta1-delta0",
+    "D3": "theta*x_{t-3} + delta0*(x_t-x_{t-1}) + delta1*(x_{t-1}-x_{t-2}) + delta2*(x_{t-2}-x_{t-3})",
+    "D3_mapping": "beta0=delta0; beta1=delta1-delta0; beta2=delta2-delta1; beta3=theta-delta2; c0=delta0,c1=delta1,c2=delta2,c3=theta",
+    "D1_mapping": "c0=delta0; c1=theta1",
+    "D0_mapping": "c0=theta0",
+    "fixed_effects": "city FE + full calendar quarter FE (2019Q1 differs from 2019Q2; not four seasonal dummies)",
+    "offset": "ln W; W is exposure, not a frequency weight",
+    "weather": "no quarterly weather control; quarterly weather fields are unavailable"
+  },
+  "inference": {
+    "estimator": "Poisson QMLE via statsmodels GLM IRLS",
+    "score": "X_i' (Q_i - mu_i)",
+    "hessian": "X' diag(mu) X",
+    "sandwich": "cluster score/Hessian CR1",
+    "cr1_formula": "(G/(G-1))*((n-1)/(n-rank))",
+    "rank": "actual full design matrix rank",
+    "reference_distribution": "two-sided t(G-1)",
+    "main_clusters": "city_key",
+    "covid_clusters": "province",
+    "bootstrap": false
+  },
+  "covid": {
+    "support": "D3 main final support, year <= 2022, current genuine source-date covid_mean finite and coverage complete",
+    "models": "D3-C0 without covid_mean; D3-C1 with covid_mean/10",
+    "same_support": true,
+    "no_2023_fill": true,
+    "cluster": "province"
+  },
+  "primary_contrasts": [
+    "c3 = 1",
+    "c3-c0 = 0"
+  ],
+  "path": "c_h is the model-implied conditional weekly-activity elasticity at h quarters after a persistent proportional facility-level change; not cumulative activity and not a causal impulse response",
+  "no_search": [
+    "no lag search",
+    "no bootstrap",
+    "no threshold search",
+    "no new databases"
+  ],
+  "software": {
+    "python": "3.12.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "scipy": "1.15.3",
+    "statsmodels": "0.14.6",
+    "engine": "statsmodels.GLM Poisson IRLS; manual score/Hessian sandwich"
+  },
+  "fit_started_utc": "2026-11-10T05:35:59.361111+00:00",
+  "fit_finished_utc": "2026-11-10T05:36:02.762777+00:00",
+  "fit_output_hashes": {}
+}

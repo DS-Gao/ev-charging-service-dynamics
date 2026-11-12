@@ -1,0 +1,5 @@
+﻿event_h,estimate,ci_low,ci_high,n_target_cities,n_target_rows,clusters,inference_method,source_file,source_sha256
+-4,1.0327218245401,0.38511091871428,1.680332730366,7,7,70,city-cluster score CR1; t(G-1) per lead; joint QR solve,data/figure_source/figS_governance_leads_v20.csv,dc20ebb86b8424979e7feea46f2309f624d462e0ccbf4662ca78e260fadcc213
+-3,1.0539353634802,0.35560277127783,1.7522679556826,8,8,70,city-cluster score CR1; t(G-1) per lead; joint QR solve,data/figure_source/figS_governance_leads_v20.csv,dc20ebb86b8424979e7feea46f2309f624d462e0ccbf4662ca78e260fadcc213
+-2,1.0751142303445,0.40121832647192,1.7490101342171,8,8,70,city-cluster score CR1; t(G-1) per lead; joint QR solve,data/figure_source/figS_governance_leads_v20.csv,dc20ebb86b8424979e7feea46f2309f624d462e0ccbf4662ca78e260fadcc213
+-1,1.1914890657857,0.56457598570184,1.8184021458696,10,10,70,city-cluster score CR1; t(G-1) per lead; joint QR solve,data/figure_source/figS_governance_leads_v20.csv,dc20ebb86b8424979e7feea46f2309f624d462e0ccbf4662ca78e260fadcc213

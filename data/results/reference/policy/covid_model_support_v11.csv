@@ -1,0 +1,14 @@
+﻿support_group,metric,value,n,cities,provinces,notes
+S_COVID,candidate_rows_S427_year_le_2022,325,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,candidate_cities,94,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,eligible_rows,325,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,eligible_cities,94,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,eligible_provinces,25,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,at_least_two_years_cities,75,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,R_switch_cities,10,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,S_switch_cities,6,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,excluded_candidate_rows,0,325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,completeness_source,"covid_exposure_complete,covid_exposure_status",325,94,25,actual sample; candidate/source-gap differences retained
+S_COVID,sample_changed_by_source_gap,False,325,94,25,actual sample; candidate/source-gap differences retained
+transitions,R_prev_observed_v9_switch_cities,10,325,94,25,city has both 0 and 1 in S_COVID
+transitions,S_prev_observed_v9_switch_cities,6,325,94,25,city has both 0 and 1 in S_COVID

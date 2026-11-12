@@ -1,0 +1,223 @@
+{
+  "script": "src/models/fit_annual_models.py",
+  "script_version": "v12_explicit_rcs_ols_ppml_score_hessian_2026-11-04",
+  "generated_utc": "2026-11-04T10:58:31+00:00",
+  "last_run_utc": "2026-11-05T11:37:41+00:00",
+  "fit_mode": "cache_reuse",
+  "input_signature": "c02338551ec87a0bf530e48e4a21785c8dabe32632cd1bf0ba28aa2345dada20",
+  "sample_signature": "1a8af8484b853421fd61c268eab0064e4ccf0faa75ae41eb80380f33b1070c55",
+  "spec_signature": "4277b57363e8666cd53ddb5cd7bf1c74552ff60e99df8908f798e6dfe7ae77bd",
+  "input_hashes": {
+    "annual_service_metrics_v9": "d244248086f65dc2dc2f09fe2dc296843be5e8ce42dbec94318e745a7a52c9b0",
+    "weather_city_year_v4": "05263d7fd140a6d7546d4287505ba498401c7c4ccf8d04c9df0419fac0c47845",
+    "script": "2fe21295a50cc06ed762988b9cd90a6e622f7233d0389cc118aff5c9f625c2b8"
+  },
+  "inputs": {
+    "annual_service_metrics_v9": "data/processed/annual_service_metrics_v9.csv",
+    "weather_city_year_v4": "data/processed/weather_city_year_v4.csv"
+  },
+  "sample": {
+    "candidate_rows": 464,
+    "candidate_cities": 123,
+    "candidate_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "candidate_positive_rule": "Q>0 and E>0 and W>0",
+    "candidate_singleton_rows": 19,
+    "candidate_singleton_cities": 19,
+    "model_rows": 445,
+    "model_cities": 104,
+    "model_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "controls": [
+      "weather_hdd18_degree_days",
+      "weather_cdd24_degree_days",
+      "weather_precipitation_sum_mm",
+      "weather_wind_speed_mean_ms",
+      "weather_relative_humidity_mean_pct"
+    ],
+    "controls_source": "V4 HDD18/CDD24 plus precipitation, wind speed, relative humidity",
+    "controls_missing_rows_candidate": 0,
+    "knots": [
+      1.0986122886681098,
+      3.327333035512101,
+      4.723557258963902,
+      7.377057166998247
+    ],
+    "quantile_levels": [
+      0.05,
+      0.35,
+      0.65,
+      0.95
+    ],
+    "quantile_method": "numpy.quantile(method='linear')",
+    "x_definition": "x=ln(N)=ln(E/W)",
+    "outcome_definitions": {
+      "A": "Q/W",
+      "N": "E/W",
+      "I": "Q/E",
+      "lnA": "ln(Q/W)",
+      "lnN": "ln(E/W)",
+      "lnI": "ln(Q/E)"
+    }
+  },
+  "models": {
+    "L0": {
+      "method": "OLS",
+      "outcome": "lnA",
+      "status": "estimated",
+      "converged": true,
+      "iterations": 1,
+      "n": 445,
+      "cities": 104,
+      "rank": 117,
+      "dimension": 117,
+      "df": 103,
+      "failure_reason": "",
+      "covariance_method": "OLS city-clustered CR1 sandwich; t(G-1)",
+      "covariance_meta": {
+        "cluster_level": "city_key",
+        "clusters": 104,
+        "cr1_factor": 1.3668008524745443,
+        "cr1_formula": "(G/(G-1))*((n-1)/(n-rank))"
+      },
+      "offset": ""
+    },
+    "L1": {
+      "method": "OLS",
+      "outcome": "lnA",
+      "status": "estimated",
+      "converged": true,
+      "iterations": 1,
+      "n": 445,
+      "cities": 104,
+      "rank": 119,
+      "dimension": 119,
+      "df": 103,
+      "failure_reason": "",
+      "covariance_method": "OLS city-clustered CR1 sandwich; t(G-1)",
+      "covariance_meta": {
+        "cluster_level": "city_key",
+        "clusters": 104,
+        "cr1_factor": 1.3751861337780689,
+        "cr1_formula": "(G/(G-1))*((n-1)/(n-rank))"
+      },
+      "offset": ""
+    },
+    "P1": {
+      "method": "Poisson QMLE",
+      "outcome": "Q",
+      "status": "estimated",
+      "converged": true,
+      "iterations": 20,
+      "n": 445,
+      "cities": 104,
+      "rank": 119,
+      "dimension": 119,
+      "df": 103,
+      "failure_reason": "",
+      "covariance_method": "Poisson QMLE score/Hessian city-clustered CR1 sandwich; t(G-1)",
+      "covariance_meta": {
+        "cluster_level": "city_key",
+        "clusters": 104,
+        "cr1_factor": 1.3751861337780689,
+        "cr1_formula": "(G/(G-1))*((n-1)/(n-rank))",
+        "hessian": "X' diag(mu) X",
+        "score": "X_i*(Q_i-mu_i)",
+        "warnings": []
+      },
+      "offset": "lnW"
+    }
+  },
+  "execution_counts": {
+    "main_model_fits_this_run": 0,
+    "main_model_fits_planned": 3,
+    "main_model_fits_total_recorded": 3,
+    "cached": true
+  },
+  "fit_history": {
+    "first_fresh_fit_count": 3,
+    "total_fit_calls_recorded": 3,
+    "last_fresh_fit_utc": "2026-11-04T10:58:31+00:00"
+  },
+  "fit_calls": {
+    "L0": 1,
+    "L1": 1,
+    "P1": 1
+  },
+  "rcs": {
+    "knots": [
+      1.0986122886681098,
+      3.327333035512101,
+      4.723557258963902,
+      7.377057166998247
+    ],
+    "basis_formula": "Hj(x)=((x-kj)_+^3-(k4-kj)/(k4-k3)*(x-k3)_+^3+(k3-kj)/(k4-k3)*(x-k4)_+^3)/(k4-k1)^2; j=1,2",
+    "derivative_formula": "Hj'(x)=(3(x-kj)_+^2-3*(k4-kj)/(k4-k3)*(x-k3)_+^2+3*(k3-kj)/(k4-k3)*(x-k4)_+^2)/(k4-k1)^2; j=1,2",
+    "quantile_method": "numpy.quantile(method='linear')",
+    "interval_type": "pointwise only; no simultaneous band claimed"
+  },
+  "inference": {
+    "ols": "city cluster CR1 covariance, factor (G/(G-1))*((n-1)/(n-rank)), t(G-1)",
+    "ppml": "Poisson score/Hessian sandwich with city-cluster sums; factor (G/(G-1))*((n-1)/(n-rank)), t(G-1) for pointwise intervals",
+    "ppml_offset": "ln(W); W is exposure only and not frequency weight"
+  },
+  "actual_adjustments": [
+    "The annual panel source contains exactly the frozen 464 positive Q/E/W rows; no sample substitution was needed.",
+    "Nineteen singleton positive-year cities were excluded once before fitting because city FE provide no within-city slope information.",
+    "The V4 five-variable HDD18/CDD24/weather set was complete for all 464 candidate rows; no four-weather fallback was used.",
+    "The model-sample export was de-duplicated after writing active and fallback weather labels; this changed table formatting only and did not change inputs, rows, knots, or estimates."
+  ],
+  "official_method_sources": [
+    "https://stat.ethz.ch/R-manual/R-devel/library/mgcv/html/gam.html",
+    "https://scorreia.com/help/ppmlhdfe.html",
+    "https://doi.org/10.1162/rest.88.4.641"
+  ],
+  "outputs": {
+    "nonlinear_coefficients_v12.csv": {
+      "path": "data/results/reference/annual/nonlinear_coefficients_v12.csv",
+      "bytes": 77089,
+      "sha256": "ef691357f7cdd36599517b0b3d8ded9e51031f196da360978561c571f00b6d7c"
+    },
+    "nonlinear_covariance_v12.csv": {
+      "path": "data/results/reference/annual/nonlinear_covariance_v12.csv",
+      "bytes": 2225903,
+      "sha256": "371451bfadec9db5690004495072ea65ea2ca6584da0f2c1bf502f5f74fcc9f4"
+    },
+    "nonlinear_joint_tests_v12.csv": {
+      "path": "data/results/reference/annual/nonlinear_joint_tests_v12.csv",
+      "bytes": 370,
+      "sha256": "d6325a460b0dddbc1da3ba161671725946cf64c1d2f2384b3f8b37f708e561db"
+    },
+    "nonlinear_model_comparison_v12.csv": {
+      "path": "data/results/reference/annual/nonlinear_model_comparison_v12.csv",
+      "bytes": 992,
+      "sha256": "a6274a24ce1b4d39b06f9d1178ad47594cd78fa245045d1aafebb012c00268c6"
+    },
+    "nonlinear_model_sample_v12.csv": {
+      "path": "data/results/reference/annual/nonlinear_model_sample_v12.csv",
+      "bytes": 131803,
+      "sha256": "fbaef8598bbdf9429a6d324c3c04ceaee3670390b7c2d598fb1588d7a43d8563"
+    },
+    "nonlinear_specs_v12.csv": {
+      "path": "data/results/reference/annual/nonlinear_specs_v12.csv",
+      "bytes": 2901,
+      "sha256": "c0a1e5c14e61c1accf3eb28bb8596ac926f09f10560acac4e3d4b7a73a4c7fdf"
+    }
+  }
+}

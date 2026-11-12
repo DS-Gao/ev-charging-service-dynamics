@@ -1,0 +1,9 @@
+﻿comparison,metric,numerator,denominator,percent,definition
+main_52,same_category,19,52,36.538461538462,All four diagonal category pairs / all matched cities
+main_52,faster_to_slower,10,27,37.037037037037,Faster to Slower / early Faster
+main_52,slower_to_faster,0,12,0,Slower to Faster / early Slower
+main_52,contraction_to_positive_growth,3,3,100,Contraction to Faster or Slower with positive late log activity change / early Contraction
+supplement_73,same_category,32,73,43.835616438356,All four diagonal category pairs / all matched cities
+supplement_73,faster_to_slower,6,23,26.086956521739,Faster to Slower / early Faster
+supplement_73,slower_to_faster,5,25,20,Slower to Faster / early Slower
+supplement_73,contraction_to_positive_growth,7,14,50,Contraction to Faster or Slower with positive late log activity change / early Contraction

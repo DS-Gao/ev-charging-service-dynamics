@@ -1,0 +1,260 @@
+{
+  "artifact": "annual_policy_association",
+  "purpose": "Complete scientific specification and exact saved-result recovery for the annual policy association models",
+  "source_inputs": {
+    "results": {
+      "path": "data/results/reference/policy/covid_model_results_v11.csv",
+      "sha256": "60c6c92d1790fe083a144632c3b5f8309fc7138748a408d972d7d1b68e1ecbfe"
+    },
+    "specs": {
+      "path": "data/results/reference/policy/model_specs_v11.csv",
+      "sha256": "db28dd83dbac587deb8fb0433986e60ecc10683d2058005d7f402675876f0f89"
+    },
+    "covariance": {
+      "path": "data/results/reference/policy/covid_model_covariance_v11.csv",
+      "sha256": "129016cf980d437a8eb1aa4a52b15b6d48cc6308b8213e1421038ecc00d445ce"
+    },
+    "sample": {
+      "path": "data/results/reference/policy/covid_model_sample_audit_v11.csv",
+      "sha256": "3ae141c554113b9f92253c297f197f9e5e7c4908be0b2677c3790204a28e9505"
+    },
+    "support": {
+      "path": "analysis/outputs/service_conversion_v11/covid_model_support_v11.csv",
+      "sha256": "b2e08c998295588a50082e354eed37f6d949d5d5b85eda1e6a40d4af6f145a27"
+    },
+    "public_input": {
+      "path": "data/processed/policy_model_input.csv",
+      "note": "Frozen public eligible input used by the independent estimator."
+    }
+  },
+  "source_metadata": {
+    "path": "data/results/reference/policy/model_metadata_v11.json",
+    "sha256": "a86f1fce36e5467c36f539dc346d2b782d33f2d168132e6fba29ca28971f9479",
+    "fit_mode": "cache_reuse",
+    "math_version": "v11_qr_ols_province_cr1_2026-11-03"
+  },
+  "sample": {
+    "source_candidate_condition": "common annual eligibility intersection: eligible facility additions, compatible observed Q, positive compatible I, known lagged B/O, and four annual weather controls; paired timing intersection also requires later lagged B/O complete; then years 2016--2022 and complete source-date COVID exposure",
+    "source_condition_expanded": "The source common annual panel starts from a 334-city calendar-year frame. A row enters the 427-row common set only when facility additions have an eligible source status, compatible Q is observed, compatible I is positive, lagged construction and operation-policy controls are known, and all four annual weather controls are finite. The paired timing rule also requires the later-date lagged B and O controls; the retained identifiers satisfy this intersection. The source construction preserves Q, E, and W as positive compatible-week quantities and requires R and S exposure timing and local-coverage statuses to be observed and time-known; unknown coverage is not recoded as zero. For the annual policy comparison, these identifiers are restricted to years 2016--2022 and finite, complete source-date COVID exposure. Pre-COVID structural zeros are accepted as complete; source gaps are not filled. The resulting selected sample contains 325 rows with finite log(Q/W), log(E/W), and log(Q/E), complete policy and weather controls, and no candidate-row exclusions.",
+    "rows": 325,
+    "cities": 94,
+    "provinces": 25,
+    "start_year": 2016,
+    "end_year": 2022,
+    "candidate_and_final_rows": 325,
+    "excluded_candidate_rows": 0,
+    "covid_source_status_counts": {
+      "pre_covid_structural_zero": 111,
+      "source_measured_complete": 214
+    },
+    "support_snapshot": {
+      "candidate_rows": 325,
+      "candidate_cities": 94,
+      "eligible_rows": 325,
+      "eligible_cities": 94,
+      "eligible_provinces": 25,
+      "at_least_two_years_cities": 75,
+      "R_switch_cities": 10,
+      "S_switch_cities": 6,
+      "excluded_candidate_rows": 0,
+      "completeness_source": "covid_exposure_complete,covid_exposure_status",
+      "sample_changed_by_source_gap": false
+    },
+    "source_condition_checks": {
+      "upstream_common_rows": 427,
+      "upstream_common_cities": 110,
+      "required_common_flags_all_true": [
+        "Q_valid_v7",
+        "I_valid_v7",
+        "facility_valid_v7",
+        "policy_lag_complete_v7",
+        "weather_controls_complete_v7",
+        "common_model_eligible",
+        "common_observable"
+      ],
+      "R_coverage_status": "observed_local_coverage for all 427 rows",
+      "S_coverage_status": "observed_local_coverage for all 427 rows",
+      "R_time_status": "time_known for all 427 rows",
+      "S_time_status": "time_known for all 427 rows",
+      "positive_compatible_quantities": [
+        "Q_per_compatible_week",
+        "E_per_compatible_week",
+        "charge_compatible_valid_weeks"
+      ],
+      "effective_lagged_policy_controls_complete": [
+        "lag1_B_count",
+        "lag1_O_count"
+      ],
+      "later_lagged_policy_controls_complete": [
+        "lag1_B_count_later",
+        "lag1_O_count_later"
+      ],
+      "paired_later_timing_source": "M1_Q_common: S_common intersect later lag1 B/O complete",
+      "saved_annual_ids_subset_of_upstream_common": true
+    },
+    "city_panel_structure": {
+      "singletons": 19,
+      "at_least_two_years": 75,
+      "R_switch_cities": 10,
+      "S_switch_cities": 6
+    }
+  },
+  "outcomes": {
+    "Q": "sum of compatible-week recorded charging activity",
+    "E": "sum of the cumulative facility indicator over the same compatible weeks",
+    "W": "number of compatible weeks",
+    "A": "Q/W",
+    "N": "E/W; the source-recorded mean facility indicator, not new-build count, power, or connector capacity",
+    "I": "Q/E"
+  },
+  "policy_mapping": {
+    "R_prev_observed": {
+      "scientific_name": "prior-year-end observed information and supervision exposure",
+      "indicator_definition": "1 when a qualifying information/supervision requirement was observed by the end of the preceding calendar year; 0 otherwise in the observed support",
+      "included_functions": [
+        "platform connection",
+        "data reporting",
+        "information interoperability",
+        "state monitoring",
+        "data collection or sharing"
+      ],
+      "not_equivalent_to": [
+        "implementation intensity",
+        "compliance",
+        "service volume",
+        "a continuous policy-strength score"
+      ]
+    },
+    "S_prev_observed": {
+      "scientific_name": "prior-year-end observed operation and maintenance responsibility exposure",
+      "indicator_definition": "1 when a qualifying operation/maintenance responsibility was observed by the end of the preceding calendar year; 0 otherwise in the observed support",
+      "included_functions": [
+        "maintenance operations",
+        "fault repair response",
+        "availability or normal operation",
+        "emergency continuity",
+        "operation-maintenance-related operator qualification"
+      ],
+      "not_equivalent_to": [
+        "implementation intensity",
+        "compliance",
+        "service volume",
+        "a continuous policy-strength score"
+      ]
+    },
+    "S427_condition_expanded": "The source common annual panel starts from a 334-city calendar-year frame. A row enters the 427-row common set only when facility additions have an eligible source status, compatible Q is observed, compatible I is positive, lagged construction and operation-policy controls are known, and all four annual weather controls are finite. The paired timing rule also requires the later-date lagged B and O controls; the retained identifiers satisfy this intersection. The source construction preserves Q, E, and W as positive compatible-week quantities and requires R and S exposure timing and local-coverage statuses to be observed and time-known; unknown coverage is not recoded as zero. For the annual policy comparison, these identifiers are restricted to years 2016--2022 and finite, complete source-date COVID exposure. Pre-COVID structural zeros are accepted as complete; source gaps are not filled. The resulting selected sample contains 325 rows with finite log(Q/W), log(E/W), and log(Q/E), complete policy and weather controls, and no candidate-row exclusions."
+  },
+  "annual_controls": {
+    "construction_policy_lag": "lag1_B_count_later",
+    "weather": [
+      "weather_temperature",
+      "weather_precipitation",
+      "weather_wind_speed",
+      "weather_relative_humidity"
+    ],
+    "weather_scope": "annual controls only; not the five-variable facility elasticity set and not quarterly weather controls"
+  },
+  "estimation": {
+    "estimator": "equal-weight log OLS with city and calendar-year fixed effects",
+    "se_method": "province-clustered CR1 finite correction",
+    "cr1_formula": "(Gp/(Gp-1))*((n-1)/(n-K))",
+    "K_definition": "full design rank including intercept, observed covariates, city FE and year FE",
+    "reference_distribution": "t(Gp-1)",
+    "cluster_count": 25,
+    "causal_scope": "conditional association; the coefficients do not identify a net policy effect or policy compliance"
+  },
+  "models": [
+    {
+      "model_id": "C0",
+      "label": "Base annual association model (without the COVID index)",
+      "covid_adjustment": "none",
+      "formula_source": "log(y_outcome) ~ R_prev_observed_v9 + S_prev_observed_v9 + lag1_B_count_later + weather_temperature + weather_precipitation + weather_wind_speed + weather_relative_humidity + cityFE + yearFE",
+      "formula_scientific": "log(Y_it) = city_FE_i + year_FE_t + b_R R_prev_observed + b_S S_prev_observed + b_B lag1_B_count_later + four annual weather controls + error_it",
+      "outcome_definitions": {
+        "A": "log(Q/W)",
+        "N": "log(E/W)",
+        "I": "log(Q/E)"
+      },
+      "fixed_effects": "city FE and calendar-year FE",
+      "fixed_effect_levels": {
+        "city": 94,
+        "year": 7
+      },
+      "cluster_level": "province",
+      "n": 325,
+      "cities": 94,
+      "provinces": 25,
+      "design_rank_by_outcome": {
+        "A": 107,
+        "I": 107,
+        "N": 107
+      },
+      "df": 24,
+      "singletons": 19,
+      "cities_with_at_least_two_years": 75,
+      "fit_status": "estimated",
+      "rank_status": "full_rank",
+      "covid_identification_status": "not_applicable",
+      "se_method": "CR1_province_finite_correction",
+      "reference_distribution": "t(Gp-1)",
+      "coefficient_table": "data/results/reference/descriptive/policy_association_summary_v18.csv",
+      "covariance_table": "data/results/reference/descriptive/policy_association_covariance_v18.csv"
+    },
+    {
+      "model_id": "C1",
+      "label": "COVID-adjusted annual association model",
+      "covid_adjustment": "current-year compatible source-date COVID stringency mean divided by 10",
+      "formula_source": "log(y_outcome) ~ R_prev_observed_v9 + S_prev_observed_v9 + lag1_B_count_later + weather_temperature + weather_precipitation + weather_wind_speed + weather_relative_humidity + covid_stringency_source_date_mean/10 + cityFE + yearFE",
+      "formula_scientific": "log(Y_it) = city_FE_i + year_FE_t + b_R R_prev_observed + b_S S_prev_observed + b_B lag1_B_count_later + four annual weather controls + d_C COVID_source_date_mean/10 + error_it",
+      "outcome_definitions": {
+        "A": "log(Q/W)",
+        "N": "log(E/W)",
+        "I": "log(Q/E)"
+      },
+      "fixed_effects": "city FE and calendar-year FE",
+      "fixed_effect_levels": {
+        "city": 94,
+        "year": 7
+      },
+      "cluster_level": "province",
+      "n": 325,
+      "cities": 94,
+      "provinces": 25,
+      "design_rank_by_outcome": {
+        "A": 108,
+        "I": 108,
+        "N": 108
+      },
+      "df": 24,
+      "singletons": 19,
+      "cities_with_at_least_two_years": 75,
+      "fit_status": "estimated",
+      "rank_status": "full_rank",
+      "covid_identification_status": "identified",
+      "se_method": "CR1_province_finite_correction",
+      "reference_distribution": "t(Gp-1)",
+      "coefficient_table": "data/results/reference/descriptive/policy_association_summary_v18.csv",
+      "covariance_table": "data/results/reference/descriptive/policy_association_covariance_v18.csv"
+    }
+  ],
+  "source_checks": {
+    "same_C0_C1_sample": true,
+    "source_candidate_rows_equal_final_rows": true,
+    "source_excluded_candidate_rows": 0,
+    "all_substantive_covariance_diagonals_match_se_squared": true,
+    "no_refit_performed": true,
+    "source_fit_mode": "cache_reuse",
+    "source_main_model_fits_this_run": 0
+  },
+  "interpretation_limits": [
+    "The policy indicators represent prior-year-end observed exposure, not implementation or compliance.",
+    "The annual policy association models and the quarterly dynamic facility/activity models answer different questions and must not be joined as a policy mediation chain.",
+    "A positive association with recorded activity can reflect visibility or reporting as well as service; it is not by itself evidence of additional delivered service.",
+    "The source-date COVID index is a contemporaneous contextual control in the paired annual comparison; 2023 is excluded because complete quarterly/source-date exposure is not available there."
+  ],
+  "outputs": {
+    "summary": "data/results/reference/descriptive/policy_association_summary_v18.csv",
+    "covariance": "data/results/reference/descriptive/policy_association_covariance_v18.csv",
+    "specification": "data/results/reference/policy/policy_association_spec_v18.json"
+  }
+}

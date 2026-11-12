@@ -1,0 +1,158 @@
+\subsection{Annual estimands and sample supports}
+\label{sec:si-annual-models}
+
+The annual analysis distinguishes recorded activity from facility exposure.  For
+city $i$ and year $t$, let $Q_{it}$ be recorded charging activity, $E_{it}$
+the cumulative facility indicator summed over the same compatible weeks, and
+$W_{it}$ the number of compatible weeks.  The source-defined measures are
+\begin{equation}
+ A_{it}=Q_{it}/W_{it},\qquad N_{it}=E_{it}/W_{it},\qquad
+ I_{it}=Q_{it}/E_{it}=A_{it}/N_{it},\qquad x_{it}=\log N_{it}.
+ \label{eq:si-definitions}
+\end{equation}
+Compatibility requires a valid source date and positive facilities.  A
+source-coded zero activity is retained, whereas a city-year with no compatible
+weeks is missing and is not assigned a zero.  Thus $A$ is activity per
+compatible week, $N$ is time-average facility exposure, and $I$ is activity per
+cumulative facility exposure.  These ratios do not recover latent demand,
+instantaneous online capacity or a complete operator total.
+
+The annual sample and its exclusions are shown in Table~\ref{tab:sample_models}.
+Before fixed-effect support exclusions, the positive-support sample contains
+464 $Q>0$, $E>0$, $W>0$ rows from 123 cities over 2016--2023.  Nineteen
+cities contribute exactly one positive year; those rows provide no within-city
+information for a city fixed-effect slope and are excluded from the positive
+models, leaving 445 rows in 104 cities.  The zero-inclusive support begins
+with 887 rows from 292 cities with finite nonnegative $Q$, positive $E$ and
+$W$, positive finite $N$, and complete annual weather controls.  It excludes
+169 cities (353 rows) whose support-wide activity sum is zero and then 11
+singleton cities (11 rows), leaving 523 rows from 112 cities: 453 positive
+rows and 70 source-coded-zero rows.  These are support definitions, not
+imputations of an unobserved outcome.
+
+\subsection{Conditional means and model specifications}
+For the log outcome, the constant-elasticity specification is
+\begin{equation}
+ \operatorname{E}[\log A_{it}\mid X_{it}]
+ =\alpha_i+\lambda_t+\beta x_{it}+\gamma^{\top}Z_{it},
+ \label{eq:si-log-l0}
+\end{equation}
+and a restricted-cubic extension adds two nonlinear terms:
+\begin{equation}
+ \operatorname{E}[\log A_{it}\mid X_{it}]
+ =\alpha_i+\lambda_t+\beta x_{it}+
+ \theta_1H_1(x_{it})+\theta_2H_2(x_{it})+\gamma^{\top}Z_{it}.
+ \label{eq:si-log-models}
+\end{equation}
+Here $\alpha_i$ and $\lambda_t$ are city and calendar-year fixed effects.  The
+vector $Z_{it}$ contains annual HDD18, CDD24, precipitation, mean wind speed
+and mean relative humidity.  These aggregates adjust for measured annual
+background conditions; they do not make facility growth exogenous or provide an
+instrument.
+
+The level models have a different estimand and retain observation exposure:
+\begin{equation}
+ \operatorname{E}[Q_{it}\mid X_{it},W_{it}]
+ =W_{it}\exp\!\left(\alpha_i+\lambda_t+\beta x_{it}
+ +\gamma^{\top}Z_{it}\right),
+ \label{eq:si-p0}
+\end{equation}
+and
+\begin{equation}
+ \operatorname{E}[Q_{it}\mid X_{it},W_{it}]
+ =W_{it}\exp\!\left(\alpha_i+\lambda_t+\beta x_{it}
+ +\theta_1H_1(x_{it})+\theta_2H_2(x_{it})
+ +\gamma^{\top}Z_{it}\right).
+ \label{eq:si-p1}
+\end{equation}
+The two level equations use Poisson pseudo-maximum likelihood (PPML), whose
+estimand is the conditional arithmetic mean of nonnegative $Q$; integer
+outcomes and equidispersion are not required.  The positive-support level
+equations use the common 445-row positive support, whereas the zero-inclusive
+level equation uses the separate 523-row support.  A zero outcome in the zero-inclusive sample is a
+source-coded zero under the stated compatibility and weather rules; unknown
+activity is never treated as zero.  Panels (a) and (b) of
+Figure~\ref{fig:si_annual} use the 445-row, 104-city positive-support fits;
+panel (c) additionally compares the positive-support and zero-inclusive
+constant PPML estimates.  The two models therefore do not estimate a single
+relation in which missingness and a recorded zero are interchangeable.
+
+The offset is $\log W_{it}$ in the PPML linear predictor, not an additional
+frequency-weight argument.  If $\mu_{it}$ denotes the modeled weekly mean and
+$X_{it}$ is a design row, then
+\begin{equation}
+ \operatorname{E}[Q_{it}\mid X_{it},W_{it}]=W_{it}\mu_{it},\qquad
+ X_{it}(Q_{it}-W_{it}\mu_{it})
+ =W_{it}X_{it}(A_{it}-\mu_{it}).
+ \label{eq:si-offset-equivalence}
+\end{equation}
+Compatible-week exposure therefore changes the modeled mean and the
+score/information; the absence of a frequency weight does not imply equal
+regression influence.  The PPML coefficient is interpreted on the conditional
+arithmetic-mean scale, not as an OLS coefficient for a log-transformed
+outcome.
+
+\subsection{Restricted-cubic form and local elasticity}
+The log and level specifications use the same two-term restricted-cubic basis.
+Let $k_1<k_2<k_3<k_4$ be the empirical 0.05, 0.35, 0.65 and 0.95 quantiles of
+$x$ in the 445-row positive sample.  Linear quantile interpolation gives the following display-rounded values
+\[
+(k_1,k_2,k_3,k_4)=(1.0986,\ 3.3273,\ 4.7236,\ 7.3771).
+\]
+With $(u)_+=\max(u,0)$,
+\begin{equation}
+ H_j(x)=\frac{(x-k_j)_+^3-
+ \dfrac{k_4-k_j}{k_4-k_3}(x-k_3)_+^3+
+ \dfrac{k_3-k_j}{k_4-k_3}(x-k_4)_+^3}
+ {(k_4-k_1)^2},\qquad j\in\{1,2\}.
+ \label{eq:si-rcs}
+\end{equation}
+The analytic derivative used for local elasticity is
+\begin{equation}
+ H'_j(x)=\frac{3(x-k_j)_+^2-
+ 3\dfrac{k_4-k_j}{k_4-k_3}(x-k_3)_+^2+
+ 3\dfrac{k_3-k_j}{k_4-k_3}(x-k_4)_+^2}
+ {(k_4-k_1)^2}.
+ \label{eq:si-rcs-derivative}
+\end{equation}
+For either fitted log mean, the local elasticity is
+$\eta(x)=\beta+\theta_1H'_1(x)+\theta_2H'_2(x)$.  It is the local derivative
+of the stated conditional function, not an estimated threshold or optimal
+stock.  Curve intervals are pointwise city-cluster intervals; no simultaneous
+band is claimed.  The joint restrictions remain model-specific: for the
+nonlinear log specification, Wald $=2.701$, $F(2,103)=1.351$ and
+$p=\LogSplineP$; for the nonlinear level specification, Wald $=3.021$,
+$F(2,103)=1.510$ and $p=\MeanSplineP$.  A non-rejection concerns the two
+added basis terms on that model's own outcome scale; it is not a global
+linearity test or an equality test across models.
+
+\subsection{Clustered inference and contrasts}
+For OLS, city-clustered CR1 inference uses the full design rank:
+\begin{equation}
+ \widehat V_{\mathrm{CR1}}=
+ \frac{G}{G-1}\frac{n-1}{n-r}
+ (X^\top X)^{-1}
+ \left[\sum_{g=1}^{G}X_g^\top\hat u_g\hat u_g^\top X_g\right]
+ (X^\top X)^{-1}.
+ \label{eq:si-cr1-ols}
+\end{equation}
+Here $r$ is the actual matrix rank.  The PPML sandwich uses the Poisson
+Hessian $X^\top\operatorname{diag}(\hat\mu)X$ and city-summed scores
+$X_i(Q_i-\hat\mu_i)$.  The positive sample has rank 117 for the linear log and
+positive-support level models and rank 119 for their nonlinear extensions, with
+$n=445$, $G=104$, CR1 factors 1.3668 and 1.3752, and $t(G-1)=t(103)$
+intervals.  The zero-inclusive level model has rank 125, $G=112$ and
+$t(111)$ intervals.  For a local elasticity, if $d(x)$ contains
+$1,H'_1(x),H'_2(x)$ in the relevant scale-coefficient positions, its variance
+is $d(x)'\widehat Vd(x)$ and its pointwise interval is
+\[
+ \hat\eta(x)\mathbin{\pm}t_{G-1,.975}\sqrt{d(x)'\widehat Vd(x)}.
+\]
+The joint test uses $F=(\theta'V_\theta^{-1}\theta)/2$ with its
+model-specific covariance block.  These conditional intervals address
+within-city dependence, not sample selection or policy endogeneity.
+The main annual table (Table~\mainref{tab:annual_models}) reports the three
+constant-elasticity estimates, their $\beta-1$ contrasts and the corresponding
+tests against zero and one.  The rank, cluster degrees of freedom and
+covariance construction above supply the inference details for those reported
+contrasts, with each test remaining on its model's stated conditional-mean scale.

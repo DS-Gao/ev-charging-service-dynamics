@@ -1,0 +1,22 @@
+﻿variable,source_field,definition,unit,frequency,analysis_use
+Q,Total,Sum of activity over compatible source dates,released activity units,city-year or city-quarter,Descriptive and facility/activity models
+E,cumulative_plugs,Sum of the facility indicator over the same compatible dates,facility-indicator weeks,city-year or city-quarter,Descriptive and facility/activity models
+W,source date,Number of compatible weeks with valid date and positive facility indicator,weeks,city-year or city-quarter,Descriptive and facility/activity models
+A,Q/W,Mean activity per compatible week,released activity units/week,city-year or city-quarter,Descriptive and facility/activity models
+N,E/W,"Mean facility indicator, not period additions",facility-indicator units,city-year or city-quarter,Descriptive and facility/activity models
+I,Q/E,Activity per facility exposure; not engineering utilization,activity units/facility-indicator week,city-year or city-quarter,Descriptive and facility/activity models
+HDD18,T2M,"Sum max(18-T,0), complete calendar",degree-days,city-year,Annual facility-activity models
+CDD24,T2M,"Sum max(T-24,0), complete calendar",degree-days,city-year,Annual facility-activity models
+Temperature,T2M,Annual daily mean with >=95% calendar coverage,degrees C,city-year,Annual policy-association models
+Precipitation,PRECTOTCORR,"Annual sum, complete calendar; no scaling of incomplete years",mm/year,city-year,Annual facility-activity and policy-association models
+Wind,WS10M,Annual daily mean with >=95% calendar coverage,m/s,city-year,Annual facility-activity and policy-association models
+Humidity,RH2M,Annual daily mean with >=95% calendar coverage,percent,city-year,Annual facility-activity and policy-association models
+R,Derived as defined in Supplementary Information,Information/supervision requirement observed by previous year end; unknown coverage distinct from observed absence,0/1 on eligible support,city-year,Annual policy association
+S,Derived as defined in Supplementary Information,Operation/maintenance requirement observed by previous year end; same coverage rule,0/1 on eligible support,city-year,Annual policy association
+Lagged construction count,Derived as defined in Supplementary Information,"Count of construction-support policy documents assigned to the previous year. Use the later effective/publication year when both are known, the effective year alone when publication year is unknown, and unknown timing when effective year is unknown; not cumulative stock.",documents,city-year,Annual policy association
+Response index,StringencyIndex_Average,Mean on compatible source dates; pre-2020 structural zero; divided by 10 in regression,index points (0-100); regression per 10 points,province-day to city-year/quarter,Annual policy and quarterly paired comparison
+Observation state,Derived as defined in Supplementary Information,Compatible source-coded zero retained; no compatible weeks means missing ratios; zero does not certify physical inactivity,categorical,city-year/quarter,All measurements and sample definitions
+record_state,Q at two endpoints,++: both positive; 0+: zero to positive; +0: positive to zero; 00: both coded zero,category,city-window,Common facility-observable endpoint sets
+facility_share,N=E/W,State-group summed mean facilities / all-member summed mean facilities at the same endpoint,fraction,state-window-endpoint,Activity-state composition
+activity_change_contribution,A=Q/W,100 times signed state-group change in summed A / full-set initial summed A,baseline activity index points,state-window,Exact additive activity change decomposition
+transition_conditional_pct,Early and late growth categories,100 times late/early category cell count / early-category column count; empty denominator remains missing,percent,comparison-category pair,Same-city descriptive growth transitions

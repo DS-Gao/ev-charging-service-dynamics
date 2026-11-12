@@ -1,0 +1,24 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+
+# Local statistical caches and generated quick-path outputs
+data/results/recomputed_*/
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+manuscript/*_compile_*.txt
+manuscript/compile_record.json
+
+# Editors and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

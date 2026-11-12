@@ -1,0 +1,4 @@
+﻿model_id,method,outcome,term,term_type,coefficient,se,ci_low,ci_high,p_value,n,cities,rank,dim,df,covariance_method,offset,fit_status,failure_reason
+L0,OLS,lnA,x,scale_linear,1.2893823090151,0.25540381958772,0.78284907120485,1.7959155468253,1.929035642775e-06,445,104,117,117,103,OLS city-clustered CR1 sandwich; t(G-1),,estimated,
+L1,OLS,lnA,x,scale_linear,1.3001676556194,0.7571426521554,-0.20144621883082,2.8017815300696,0.088947526361524,445,104,119,119,103,OLS city-clustered CR1 sandwich; t(G-1),,estimated,
+P1,Poisson QMLE,Q,x,scale_linear,0.74293396316204,0.38741767283873,-0.025417616405885,1.51128554273,0.057924541312729,445,104,119,119,103,Poisson QMLE score/Hessian city-clustered CR1 sandwich; t(G-1),lnW,estimated,

@@ -1,0 +1,85 @@
+\subsection{Quarterly governance support and estimands}
+\label{sec:si-governance-methods}
+
+The quarterly governance panel contains the 334 registered cities and 32
+natural calendar quarters per city.  The eligible untreated pool contains
+finite outcome and covariate rows classified as clean pre-policy or
+conditionally never observed (no qualifying record in the corpus).  Transition
+rows, fully post-policy rows and unknown coverage are excluded from that pool.
+The city-level date precision and pre-period support used to classify these
+rows are retained in Table~\ref{tab:si_governance_support}; this registry is
+not the 11-city target panel.
+City and calendar-quarter fixed effects are included.  The available weather
+series is city-year aggregated, so no annual weather value is copied into a
+quarterly control.  For each target city, estimable positive joint quarters
+receive equal within-city weight and city means are then averaged with equal
+city weight.  Activity, facilities and
+$\delta=\log A-\log N$ use the same target rows and the same city-cluster
+draw; the intensity contrast is therefore estimated jointly rather than
+reconstructed from independent intervals.
+
+For a target outcome $Y\in\{\log A,\log N,\delta\}$, the untreated model is
+fit on the eligible untreated pool.  For supported target quarter $q$ in city
+$i$, define the conditional contribution
+\[
+ D_{iq}=Y_{iq}-\widehat{Y}^{\,0}_{iq},
+\]
+where $\widehat{Y}^{\,0}_{iq}$ is the prediction from that untreated model.
+The first-year target uses $h=1,\ldots,4$ and the second-year target uses
+$h=5,\ldots,8$, with $h$ measured from the policy-event interval.  Within a
+city,
+\[
+ \overline D_{i,h}=|\mathcal Q_{ih}|^{-1}
+ \sum_{q\in\mathcal Q_{ih}}D_{iq},
+\]
+and the reported target mean is the equal-city average over cities with an
+estimable target.  The primary first-year target contains 11 cities and 36
+city-quarters.  Eight cities support both post-policy windows (Dongguan,
+Xiamen, Chengdu, Wuhan, Wenzhou, Huzhou, Fuzhou and Suzhou), with 30
+first-year and 31 second-year quarters.  A distinct eight-city prior-support
+set (Dongguan, Yichun, Chengdu, Wuhan, Haikou, Wenzhou, Fuzhou and Shaoxing)
+has at least two jointly positive pre-policy quarters in each block
+$h=-8,\ldots,-5$ and $h=-4,\ldots,-1$; this is a support diagnostic and does
+not replace the 11-city target.
+
+\subsection{Lead diagnostic and window decomposition}
+The first-year comparison pool contains 70 cities and 702 untreated rows.  An
+independent lead diagnostic estimates four separate indicators at
+$h=-4,-3,-2,-1$, using city-clustered CR1 intervals with $t(69)$ and full
+design rank 104.  Lead support differs by event time, and the lead coefficients
+are not in-sample residual averages from the untreated-only prediction.  The
+joint tests are $p=\PreAP$ for activity, $p=\PreNP$ for facilities and
+$p=\PreDP$ for $\delta$; the facility test is $p=0.0008415$.  Because the lead
+diagnostic and the post-policy averages use different reference structures,
+their coefficients are not connected into one event curve and are not directly
+subtracted.
+
+For the paired H1/H2 decomposition, let $C_{11}$ denote the 11-city first-year
+target and $C_8$ the eight cities observed in both post-policy windows.  For
+each outcome, the same-city time term, city-composition term and total gap are
+\[
+ T=\overline D_{H2,C_8}-\overline D_{H1,C_8},\qquad
+ C=\overline D_{H1,C_8}-\overline D_{H1,C_{11}},
+\]
+\[
+ T+C=\overline D_{H2,C_8}-\overline D_{H1,C_{11}}.
+\]
+Point estimates add algebraically, while each interval is computed from the
+relevant joint draw distribution.  The complete H1, H2, paired,
+prior-support and lead values remain in the corresponding SI tables.
+
+\subsection{Joint bootstrap and validity rules}
+Uncertainty uses 999 paired city-cluster bootstrap draws from the PCG64
+generator with seed 20261104.  Each draw resamples city clusters jointly
+across activity, facilities and $\delta$, re-estimates the untreated
+city/time fixed-effect prediction on the draw-specific untreated pool, and
+recomputes every supported target contribution.  For each target, a draw
+contributes only when every required target row, sampled target copy and
+untreated prediction is defined and finite; otherwise that target--draw fails
+in full and partial target contributions are discarded.  The primary windows have 996 successful draws
+and three failures.  Percentile intervals are reported only with at least 900
+successful draws and a success rate of at least 0.90; failures remain in the
+999-draw denominator and are neither imputed nor retried.  Shared draws retain
+cross-outcome covariance, including the activity--facility contrast.  The
+result is a conditional timing and support comparison; the facility lead result
+limits a causal interpretation of post-policy differences.

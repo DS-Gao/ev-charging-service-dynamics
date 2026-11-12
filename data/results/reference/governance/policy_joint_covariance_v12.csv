@@ -1,0 +1,199 @@
+﻿model_id,target,event_h,outcome_a,outcome_b,covariance,n_success,method
+G_COVID0,COVID_H1_available,1,log_A,log_A,0.0788156687041,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,1,log_N,log_N,0.00393648375795,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,1,log_A,log_N,0.00450410959623,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,1,log_A,delta,0.0743115591079,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,1,log_N,delta,0.000567625838287,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,1,delta,delta,0.0737439332697,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,2,log_A,log_A,0.142109089725,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,2,log_N,log_N,0.0123772111399,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,2,log_A,log_N,-0.0209350357811,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,2,log_A,delta,0.163044125506,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,2,log_N,delta,-0.0333122469209,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,2,delta,delta,0.196356372427,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,3,log_A,log_A,0.0852171543061,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,3,log_N,log_N,0.00581414651573,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,3,log_A,log_N,0.0033899125438,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,3,log_A,delta,0.0818272417622,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,3,log_N,delta,-0.00242423397193,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,3,delta,delta,0.0842514757341,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,4,log_A,log_A,0.112526794944,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,4,log_N,log_N,0.022774860116,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,4,log_A,log_N,-0.0191259511537,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,4,log_A,delta,0.131652746098,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,4,log_N,delta,-0.0419008112698,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID0,COVID_H1_available,4,delta,delta,0.173553557368,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,1,log_A,log_A,0.0791406888953,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,1,log_N,log_N,0.0042163417002,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,1,log_A,log_N,0.00435061653217,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,1,log_A,delta,0.0747900723631,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,1,log_N,delta,0.000134274831969,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,1,delta,delta,0.0746557975311,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,2,log_A,log_A,0.139663952345,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,2,log_N,log_N,0.0121825875013,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,2,log_A,log_N,-0.0202359035136,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,2,log_A,delta,0.159899855858,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,2,log_N,delta,-0.0324184910149,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,2,delta,delta,0.192318346873,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,3,log_A,log_A,0.0846565408817,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,3,log_N,log_N,0.00579927315649,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,3,log_A,log_N,0.0035369236219,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,3,log_A,delta,0.0811196172598,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,3,log_N,delta,-0.00226234953459,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,3,delta,delta,0.0833819667944,994,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,4,log_A,log_A,0.111097526949,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,4,log_N,log_N,0.0226210349483,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,4,log_A,log_N,-0.0186586956608,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,4,log_A,delta,0.12975622261,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,4,log_N,delta,-0.0412797306091,995,same-draw city-cluster pairs bootstrap covariance
+G_COVID1,COVID_H1_available,4,delta,delta,0.171035953219,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,1,log_A,log_A,0.0721131134968,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,1,log_N,log_N,0.0225628374584,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,1,log_A,log_N,0.026889561715,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,1,log_A,delta,0.0452235517818,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,1,log_N,delta,0.00432672425661,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,1,delta,delta,0.0408968275251,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,2,log_A,log_A,0.0984751684412,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,2,log_N,log_N,0.0120079003168,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,2,log_A,log_N,-0.0109598596054,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,2,log_A,delta,0.109435028047,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,2,log_N,delta,-0.0229677599222,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,2,delta,delta,0.132402787969,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,3,log_A,log_A,0.109135716865,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,3,log_N,log_N,0.0064306921946,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,3,log_A,log_N,0.00901793675177,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,3,log_A,delta,0.100117780113,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,3,log_N,delta,0.00258724455718,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,3,delta,delta,0.0975305355562,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,4,log_A,log_A,0.0875187417341,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,4,log_N,log_N,0.0210150739335,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,4,log_A,log_N,-0.0131103818402,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,4,log_A,delta,0.100629123574,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,4,log_N,delta,-0.0341254557737,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,4,delta,delta,0.134754579348,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,1,log_A,log_A,0.0336816013184,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,1,log_N,log_N,0.00583617279553,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,1,log_A,log_N,0.00729534579754,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,1,log_A,delta,0.0263862555209,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,1,log_N,delta,0.00145917300201,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,1,delta,delta,0.0249270825188,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,2,log_A,log_A,0.0767657694597,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,2,log_N,log_N,0.00623040465414,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,2,log_A,log_N,0.00788282139152,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,2,log_A,delta,0.0688829480683,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,2,log_N,delta,0.00165241673738,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,2,delta,delta,0.0672305313309,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,3,log_A,log_A,0.0654111776526,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,3,log_N,log_N,0.00853457262696,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,3,log_A,log_N,0.0064340679252,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,3,log_A,delta,0.0589771097274,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,3,log_N,delta,-0.00210050470175,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,3,delta,delta,0.0610776144292,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,4,log_A,log_A,0.0756489764745,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,4,log_N,log_N,0.00834266046482,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,4,log_A,log_N,0.00344297095462,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,4,log_A,delta,0.0722060055198,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,4,log_N,delta,-0.0048996895102,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_complete,4,delta,delta,0.07710569503,995,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,5,log_A,log_A,0.0896071505389,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,5,log_N,log_N,0.0127848860354,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,5,log_A,log_N,-0.00977860781597,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,5,log_A,delta,0.0993857583549,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,5,log_N,delta,-0.0225634938514,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,5,delta,delta,0.121949252206,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,6,log_A,log_A,0.085204132657,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,6,log_N,log_N,0.0145089204428,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,6,log_A,log_N,-0.000957636811016,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,6,log_A,delta,0.086161769468,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,6,log_N,delta,-0.0154665572538,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,6,delta,delta,0.101628326722,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,7,log_A,log_A,0.0864878725554,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,7,log_N,log_N,0.0143192574424,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,7,log_A,log_N,0.000483721390489,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,7,log_A,delta,0.0860041511649,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,7,log_N,delta,-0.0138355360519,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,7,delta,delta,0.0998396872167,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,8,log_A,log_A,0.100132049424,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,8,log_N,log_N,0.0186251000262,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,8,log_A,log_N,0.00856479234844,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,8,log_A,delta,0.0915672570758,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,8,log_N,delta,-0.0100603076777,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H2_available,8,delta,delta,0.101627564754,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,1,log_A,log_A,0.530144041719,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,1,log_N,log_N,0.0597523092945,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,1,log_A,log_N,0.0796352176811,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,1,log_A,delta,0.450508824038,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,1,log_N,delta,0.0198829083866,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,1,delta,delta,0.430625915652,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,2,log_A,log_A,1.1800761284,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,2,log_N,log_N,0.114516643455,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,2,log_A,log_N,-0.0649480224437,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,2,log_A,delta,1.24502415085,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,2,log_N,delta,-0.179464665898,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,2,delta,delta,1.42448881675,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,3,log_A,log_A,1.27182747066,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,3,log_N,log_N,0.0949023535276,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,3,log_A,log_N,0.121757456652,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,3,log_A,delta,1.15007001401,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,3,log_N,delta,0.0268551031242,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,3,delta,delta,1.12321491088,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,4,log_A,log_A,1.16059760484,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,4,log_N,log_N,0.210170680671,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,4,log_A,log_N,-0.11727607374,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,4,log_A,delta,1.27787367859,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,4,log_N,delta,-0.327446754412,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,4,delta,delta,1.605320433,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,5,log_A,log_A,1.45041272638,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,5,log_N,log_N,0.204270476388,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,5,log_A,log_N,-0.151040175082,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,5,log_A,delta,1.60145290147,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,5,log_N,delta,-0.35531065147,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,5,delta,delta,1.95676355294,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,6,log_A,log_A,1.38919760481,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,6,log_N,log_N,0.231603507072,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,6,log_A,log_N,-0.00556527096945,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,6,log_A,delta,1.39476287578,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,6,log_N,delta,-0.237168778042,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,6,delta,delta,1.63193165382,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,7,log_A,log_A,1.40296575125,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,7,log_N,log_N,0.228444893646,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,7,log_A,log_N,0.0197984961646,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,7,log_A,delta,1.38316725508,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,7,log_N,delta,-0.208646397482,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,7,delta,delta,1.59181365256,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,8,log_A,log_A,1.60211279079,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,8,log_N,log_N,0.298001600418,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,8,log_A,log_N,0.137036677575,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,8,log_A,delta,1.46507611321,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,8,log_N,delta,-0.160964922843,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,dynamic,8,delta,delta,1.62604103606,996,same-draw city-cluster pairs bootstrap covariance
+G_MAIN,H1_available,,log_A,log_A,0.738290903123,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_available,,log_N,log_N,0.0839369250361,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_available,,log_A,log_N,-0.00482384791454,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_available,,log_A,delta,0.743114751038,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_available,,log_N,delta,-0.0887607729507,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_available,,delta,delta,0.831875523988,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_complete,,log_A,log_A,0.767681964364,995,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_complete,,log_N,log_N,0.102131144892,995,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_complete,,log_A,log_N,0.0665616635909,995,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_complete,,log_A,delta,0.701120300773,995,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_complete,,log_N,delta,-0.0355694813012,995,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H1_complete,,delta,delta,0.736689782074,995,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H2_available,,log_A,log_A,1.3329615907,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H2_available,,log_N,log_N,0.221081316635,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H2_available,,log_A,log_N,-0.00823107162993,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H2_available,,log_A,delta,1.34119266233,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H2_available,,log_N,delta,-0.229312388265,996,same-draw city-window aggregate pairs bootstrap covariance
+G_MAIN,H2_available,,delta,delta,1.5705050506,996,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID0,COVID_H1_available,,log_A,log_A,1.16791453121,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID0,COVID_H1_available,,log_N,log_N,0.0944274389405,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID0,COVID_H1_available,,log_A,log_N,-0.093915060565,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID0,COVID_H1_available,,log_A,delta,1.26182959177,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID0,COVID_H1_available,,log_N,delta,-0.188342499505,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID0,COVID_H1_available,,delta,delta,1.45017209128,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID1,COVID_H1_available,,log_A,log_A,1.16380779798,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID1,COVID_H1_available,,log_N,log_N,0.094550127974,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID1,COVID_H1_available,,log_A,log_N,-0.0927085538911,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID1,COVID_H1_available,,log_A,delta,1.25651635187,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID1,COVID_H1_available,,log_N,delta,-0.187258681865,995,same-draw city-window aggregate pairs bootstrap covariance
+G_COVID1,COVID_H1_available,,delta,delta,1.44377503373,995,same-draw city-window aggregate pairs bootstrap covariance

@@ -1,0 +1,15 @@
+parameter,model,exact_value,display_value,units,section_location
+rcs_knot_1,annual_positive_support,1.0986122886681098,1.0986,log facility exposure,SI S4
+rcs_knot_2,annual_positive_support,3.327333035512101,3.3273,log facility exposure,SI S4
+rcs_knot_3,annual_positive_support,4.723557258963902,4.7236,log facility exposure,SI S4
+rcs_knot_4,annual_positive_support,7.377057166998247,7.3771,log facility exposure,SI S4
+nonlinear_test_wald,annual_log_mean,2.701035719335,2.701,test statistic,SI S4
+nonlinear_test_F,annual_log_mean,1.3505178596675,1.351,"F statistic with df (2,103)",SI S4
+nonlinear_test_wald,annual_level_mean,3.0206098393115,3.021,test statistic,SI S4
+nonlinear_test_F,annual_level_mean,1.5103049196557,1.510,"F statistic with df (2,103)",SI S4
+cr1_factor,annual_positive_linear,1.3668008524745443,1.3668,finite-sample covariance factor,SI S4
+cr1_factor,annual_positive_nonlinear,1.3751861337780689,1.3752,finite-sample covariance factor,SI S4
+policy_se,operation_maintenance_lnI_base,0.51283569866821332,0.513,province-clustered standard error,SI S6
+policy_se,operation_maintenance_lnI_covid_adjusted,0.51902147477200067,0.519,province-clustered standard error,SI S6
+policy_se,information_supervision_lnI_base,0.65088184211613365,0.651,province-clustered standard error,SI S6
+policy_se,information_supervision_lnI_covid_adjusted,0.65238688519260779,0.652,province-clustered standard error,SI S6

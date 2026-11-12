@@ -1,0 +1,65 @@
+\subsection{Policy content coding}
+\label{sec:si-policy-methods}
+
+The policy evidence is represented at three linked levels: clause, document
+and city.  The research-window corpus contains 601 locally applicable
+documents covering 176 cities.  Of these, 207 documents covering 88 cities
+contain 466 retained requirement clauses.  A document enters the analytical
+content corpus when it has a local administrative scope, an applicable date
+within the study frame, and a requirement or condition that can be linked to
+charging infrastructure or its operation.  A clause is the classification
+unit; document and city identifiers are retained separately and are not
+additive counts.  Original language, translated wording, document identity,
+source locator, publication date, effective date and date precision are
+retained for every evidence record.
+
+The codebook records four functional groups: information and supervision;
+operation and maintenance; continuing operation or payment; and assessable or
+subsidy-linked conditions.  A label describes what a text requires, monitors
+or conditions.  It is not a measure of compliance, policy intensity or realized
+service.  Labels are non-exclusive: a clause may require both reporting and
+maintenance, or condition payment on continued operation.  Functional city
+counts therefore overlap and cannot be summed to a policy total.  Evidence is
+located by the retained source fragment, document identifier and
+clause identifier.  Because labels are non-exclusive, the functional counts
+describe the number of clauses meeting each requirement definition rather than
+a partition of documents or cities.
+
+\subsection{Governance timing registry}
+The timing registry is separate from the 88-city content scope and contains 95
+cities with a qualifying governance record.  Construction support is coded
+$B$, information or supervision $R$, and operating-service responsibility
+$S$; $G$ denotes the combined path following the first qualifying $R$ or $S$
+requirement.  Here $B$ identifies construction-support events; the annual
+regressor $B_{i,t-1}$ defined below is a prior-year document count.
+Publication and effective dates are retained separately.  For
+each record, let $[a,b]$ be the inclusive interval implied by the earliest known
+lower bound and latest known upper bound at the reported precision.  A calendar
+quarter is clean pre-policy only when its end precedes $a$, transitional when it
+intersects $[a,b]$, and fully post-policy only when its start follows $b$.
+Year-only dates remain intervals and are not assigned an artificial event
+quarter.  Unknown coverage or unresolved timing remains unknown and is not
+coded as untreated.  A first year with observed facilities is not interpreted
+as a construction or commissioning date.
+
+The timing table retains the city-level dates, precision, pre-period support and
+first/second-year availability needed by the governance comparison.  Content
+coverage, governance timing, charging observations and their intersections
+remain separate denominators in the accompanying overlap tables.  This keeps a
+documented responsibility distinct from the later quarterly support and from
+the annual association estimand.
+
+\subsection{Annual construction-support year assignment}
+For the annual policy count $B$, a document is assigned to a calendar year only
+when its effective year is known.  When both effective and publication years are
+known, the assigned year is the later of the two; when the effective year is
+known but the publication year is not, the effective year is used.  When the
+effective year is unknown, the assigned year remains unknown even if a
+publication year is available.  The annual regressor $B_{i,t-1}$ is the number
+of qualifying construction-support policy documents assigned to the preceding
+calendar year $t-1$; it is a prior-year document count, not a cumulative stock.
+The $R$ and $S$ indicators are already defined at the end of the preceding year
+and are not lagged a second time.  This year-assignment rule is distinct from
+the quarterly date-interval rule above: a quarter is cleanly pre-policy only
+when its end precedes the lower bound, transitional when it intersects the
+interval, and fully post-policy only when its start follows the upper bound.

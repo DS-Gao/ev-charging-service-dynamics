@@ -1,0 +1,18 @@
+{
+  "figures": {
+    "figS_governance": [
+      "figS_governance.pdf",
+      "figS_governance.svg",
+      "figS_governance.png",
+      "figS_governance_preview.png"
+    ],
+    "figS_window_decomposition": [
+      "figS_window_decomposition.pdf",
+      "figS_window_decomposition.svg",
+      "figS_window_decomposition.png",
+      "figS_window_decomposition_preview.png"
+    ]
+  },
+  "source_provenance_csv": "si_figure_provenance_v20.csv",
+  "model_rule": "Saved V18/V13 estimates only; no model fitting or bootstrap calculation."
+}

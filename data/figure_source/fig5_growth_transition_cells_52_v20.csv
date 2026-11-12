@@ -1,0 +1,17 @@
+﻿late_category,early_category,n,conditional_pct,comparison,n_cities
+facility_expansion_activity_faster,facility_expansion_activity_faster,10,37.037037037037,main_52,52
+facility_expansion_activity_faster,both_grow_activity_lags,0,0,main_52,52
+facility_expansion_activity_faster,facility_expansion_activity_contracts,1,33.333333333333,main_52,52
+facility_expansion_activity_faster,other,4,40,main_52,52
+both_grow_activity_lags,facility_expansion_activity_faster,10,37.037037037037,main_52,52
+both_grow_activity_lags,both_grow_activity_lags,8,66.666666666667,main_52,52
+both_grow_activity_lags,facility_expansion_activity_contracts,2,66.666666666667,main_52,52
+both_grow_activity_lags,other,0,0,main_52,52
+facility_expansion_activity_contracts,facility_expansion_activity_faster,7,25.925925925926,main_52,52
+facility_expansion_activity_contracts,both_grow_activity_lags,3,25,main_52,52
+facility_expansion_activity_contracts,facility_expansion_activity_contracts,0,0,main_52,52
+facility_expansion_activity_contracts,other,5,50,main_52,52
+other,facility_expansion_activity_faster,0,0,main_52,52
+other,both_grow_activity_lags,1,8.3333333333333,main_52,52
+other,facility_expansion_activity_contracts,0,0,main_52,52
+other,other,1,10,main_52,52

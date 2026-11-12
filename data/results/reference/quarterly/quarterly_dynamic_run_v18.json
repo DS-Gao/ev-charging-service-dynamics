@@ -1,0 +1,53 @@
+{
+  "status": "stable_result_saved",
+  "created_utc": "2026-11-10T05:36:03.299130+00:00",
+  "script": "not included; saved quarterly result artifacts are supplied for audit",
+  "script_sha256": "0949cbfd1457d479cf5020b6d36fdcb68e762d27bbea248b8deee297ab0408e3",
+  "source_panel": "not included; saved quarterly sample and audit are supplied under data/results/reference/quarterly/",
+  "source_panel_sha256": "d496a021d77e13aeaf0f057c990329fec5b7f9c4ce4483c25b793beb933588d8",
+  "spec_path": "data/results/reference/quarterly/quarterly_dynamic_specs_v18.json",
+  "spec_sha256": "3c5fd9a6bf8c68a0166a81f453dfd2c1cc2e44194fe52eba4e3e4d78772f1596",
+  "candidate_rows": 2229,
+  "candidate_cities": 273,
+  "final_rows": 1542,
+  "final_cities": 111,
+  "covid_candidate_rows": 1107,
+  "covid_removed_rows": 17,
+  "covid_final_rows": 1090,
+  "covid_final_cities": 94,
+  "fit_status": {
+    "D0": "estimated",
+    "D3": "estimated",
+    "D1": "estimated",
+    "D3-C0": "estimated",
+    "D3-C1": "estimated"
+  },
+  "fit_iterations": {
+    "D0": 23,
+    "D3": 18,
+    "D1": 39,
+    "D3-C0": 22,
+    "D3-C1": 29
+  },
+  "actual_fit_count": 5,
+  "fit_attempts_total": 10,
+  "fit_attempt_history_path": "data/results/reference/quarterly/quarterly_dynamic_fit_attempt_history_v18.json",
+  "bootstrap": false,
+  "lag_search": false,
+  "output_files": [
+    "quarterly_dynamic_sample_v18.csv",
+    "quarterly_dynamic_sample_audit_v18.csv",
+    "quarterly_dynamic_support_v18.csv",
+    "quarterly_dynamic_specs_v18.csv",
+    "quarterly_dynamic_specs_v18.json",
+    "quarterly_dynamic_coefficients_v18.csv",
+    "quarterly_dynamic_covariance_v18.csv",
+    "quarterly_dynamic_contrasts_v18.csv",
+    "quarterly_dynamic_paths_v18.csv",
+    "quarterly_covid_comparison_v18.csv",
+    "dynamic_findings_v18.md",
+    "quarterly_dynamic_diagnostics_v18.csv",
+    "quarterly_dynamic_run_v18.json",
+    "quarterly_dynamic_fit_attempt_history_v18.json"
+  ]
+}
