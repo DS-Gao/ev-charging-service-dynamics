@@ -64,7 +64,7 @@ python -X utf8 src/descriptive/diagnostics.py --check-reference
 The figure-only component can also be run separately:
 
 ```powershell
-python scripts/quick_figures.py
+python scripts/quick_figures.py --released-scale-labels
 ```
 
 For a fresh raw-data preparation, download the Zenodo version-2 `ev_air.csv`
