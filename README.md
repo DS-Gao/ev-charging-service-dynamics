@@ -90,7 +90,7 @@ conditions are documented once in `docs/DATA_ACCESS.md`.
 
 ## Versioned release and citation
 
-Research-materials release [v1.2.2](https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.2) retains the fixed v1.2.0 baseline and updates the public field-scale note, broad policy-responsibility dictionary, affected Figure 4 and Figure 8 renderer, and the 58-row final figure/table map. The release contains replication code, processed inputs, saved numeric results, and metadata only.
+Research-materials release [v1.2.3](https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.3) retains the fixed v1.2.0 baseline and updates the public field-scale note, broad policy-responsibility dictionary, affected Figure 4 and Figure 8 renderer, and the 58-row final figure/table map. The release contains replication code, processed inputs, saved numeric results, and metadata only.
 
 Cite the release with [CITATION.cff](CITATION.cff). Original code in `src/` and
 `scripts/` is under the [MIT License](LICENSE); original repository

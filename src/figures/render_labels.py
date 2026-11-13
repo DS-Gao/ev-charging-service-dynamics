@@ -400,6 +400,10 @@ def render(repo: Path, output: Path) -> list[dict[str, object]]:
         renderer.figureS_governance,
     ):
         contracts.append(function())
+    contracts.extend(renderer.figure5_growth_transitions())
+    contracts.extend(renderer.figureS_city_paths())
+    contracts.append(renderer.figureS_recording_coverage())
+    contracts.append(renderer.figureS_window_decomposition())
     manifest = {
         "renderer": "src/figures/render_labels.py",
         "source_directory": "data/figure_source",
