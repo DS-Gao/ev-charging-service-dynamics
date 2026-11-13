@@ -1,7 +1,7 @@
 # Policy-source metadata
 
 `policy_sources.csv` is the reader-facing crosswalk for the government policy
-records cited as `gov1`–`gov12` in the manuscript.  `P001`–`P012` are stable
+records cited as `gov1`–`gov12` in the study.  `P001`–`P012` are stable
 short keys used in the tables; they do not replace the original bibliography
 keys or the original document identifiers.
 
@@ -27,6 +27,6 @@ The fields have deliberately different roles:
 
 The repository contains metadata and short excerpts only.  It does not
 redistribute the policy corpus or subscription-restricted full text.  The
-manuscript's formal citations remain the `gov*` bibliography entries; the
+study's formal citations remain the `gov*` bibliography entries; the
 `P*` keys provide a compact link from the displayed provision to this
 crosswalk.

@@ -1,32 +1,17 @@
 """Redraw the saved figure set without fitting any statistical model.
 
-The default route consumes committed numeric figure-source tables and the
-bundled source geometry.  ``--compile`` is an explicit optional handoff to the
-standard manuscript compiler; it does not trigger an estimator or data
-preparation stage.
+The route consumes committed numeric figure-source tables and the bundled
+source geometry.  It never compiles a manuscript or runs data preparation.
 """
 
 from __future__ import annotations
 
-import argparse
 import subprocess
 import sys
 from pathlib import Path
 
 
 REPOSITORY = Path(__file__).resolve().parents[1]
-
-
-def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
-        description="Redraw saved figures without fitting models; optionally compile the manuscript."
-    )
-    parser.add_argument(
-        "--compile",
-        action="store_true",
-        help="After figure rendering, run manuscript/compile_manuscript.py.",
-    )
-    return parser
 
 
 def _run(relative: str) -> None:
@@ -36,10 +21,17 @@ def _run(relative: str) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = _parser().parse_args(argv)
+    supplied = sys.argv[1:] if argv is None else argv
+    if supplied == ["--compile"]:
+        print(
+            "Manuscript compilation is not part of the public package; "
+            "running the saved-figure route only. Use the separate local "
+            "submission delivery for compilation.",
+            flush=True,
+        )
+    elif supplied:
+        raise SystemExit(f"unrecognized option(s): {' '.join(supplied)}")
     _run("scripts/quick_figures.py")
-    if args.compile:
-        _run("manuscript/compile_manuscript.py")
     print("saved-result route complete", flush=True)
     return 0
 

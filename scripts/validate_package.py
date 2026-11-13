@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 from pathlib import Path
 
@@ -42,6 +43,7 @@ REQUIRED = [
     "data/results/reference/annual/ppml_zero_status_v15.json",
     "data/results/reference/policy/covid_model_results_v11.csv",
     "data/results/reference/policy/covid_model_covariance_v11.csv",
+    "data/results/reference/policy/covid_model_sample_selection_v11.csv",
     "data/results/reference/quarterly/quarterly_dynamic_coefficients_v18.csv",
     "data/results/reference/quarterly/quarterly_dynamic_covariance_v18.csv",
     "data/results/reference/governance/policy_effects_v12.csv",
@@ -74,6 +76,21 @@ REQUIRED = [
 ]
 ABSOLUTE = re.compile(r"(?:[A-Z]:\\(?:desktop|Users|Windows|home)|/Users/|/home/|/mnt/)")
 FORBIDDEN_NAMES = {"panel_with_covid_v11.csv", "source_date_details_v11.csv"}
+SKIP_DIRECTORY_NAMES = {
+    ".git",
+    ".cache",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".tox",
+    ".nox",
+    "__pycache__",
+    "build",
+    "dist",
+    "cache",
+    "generated",
+}
+TEXT_SUFFIXES = {".csv", ".json", ".geojson", ".md", ".py", ".txt", ".cff", ".bib"}
 
 
 def _csv(path: Path) -> pd.DataFrame:
@@ -85,6 +102,47 @@ def _is_generated_compiler_artifact(path: Path) -> bool:
 
     relative = path.relative_to(REPOSITORY)
     return relative == Path("manuscript/compile_record.json") or relative.match("manuscript/*_compile_*.txt")
+
+
+def _skip_directory(name: str) -> bool:
+    """Return true for non-scientific trees that must not enter path checks."""
+
+    lowered = name.lower()
+    return (
+        lowered in SKIP_DIRECTORY_NAMES
+        or lowered.startswith("recomputed_")
+        or lowered.startswith("generated_")
+        or "generated" in lowered
+    )
+
+
+def _iter_public_text_files() -> tuple[list[Path], list[Path]]:
+    """Walk published text files while excluding caches and virtual environments.
+
+    A directory containing ``pyvenv.cfg`` is a Python environment, regardless of
+    its name.  The directory and all descendants are excluded before file
+    contents are read, so a harmless dependency path cannot trigger a package
+    failure.  Scientific files outside those trees remain in the returned list.
+    """
+
+    text_files: list[Path] = []
+    virtual_env_roots: list[Path] = []
+    for root, directories, files in os.walk(REPOSITORY):
+        root_path = Path(root)
+        relative_parts = root_path.relative_to(REPOSITORY).parts
+        if any(_skip_directory(part) for part in relative_parts):
+            directories[:] = []
+            continue
+        if "pyvenv.cfg" in files:
+            virtual_env_roots.append(root_path)
+            directories[:] = []
+            continue
+        directories[:] = [name for name in directories if not _skip_directory(name)]
+        for name in files:
+            path = root_path / name
+            if path.suffix.lower() in TEXT_SUFFIXES:
+                text_files.append(path)
+    return text_files, virtual_env_roots
 
 
 def main() -> None:
@@ -114,18 +172,60 @@ def main() -> None:
     if int(positive.sum()) != 464 or annual.loc[positive, "city_key"].nunique() != 123:
         raise AssertionError("unexpected annual positive-support candidate")
 
+    selection = _csv(REPOSITORY / "data/results/reference/policy/covid_model_sample_selection_v11.csv")
+    expected_selection_columns = {
+        "analysis_row_id",
+        "city_key",
+        "city",
+        "province",
+        "year",
+        "upstream_S427_record_v10",
+        "model_input_row_v11",
+        "selection_status_v11",
+        "exclusion_reason_v11",
+        "facility_additions_analysis",
+        "facility_outcome_status_v7",
+        "facility_valid_v7",
+        "facility_model_eligible",
+        "activity_outcome_status_v7",
+        "Q_valid_v7",
+        "activity_model_eligible",
+        "common_model_eligible",
+        "weather_controls_complete_v7",
+        "policy_lag_complete_v7",
+        "covid_exposure_complete_v11",
+        "covid_exposure_status",
+        "covid_exposure_inclusion_reason_v11",
+    }
+    if len(selection) != 427 or set(selection.columns) != expected_selection_columns:
+        raise AssertionError(
+            "unexpected compact policy selection table: "
+            f"rows={len(selection)}, columns={len(selection.columns)}"
+        )
+    included = selection["model_input_row_v11"].astype(str).str.lower().eq("true")
+    excluded = ~included
+    if int(included.sum()) != 325 or int(excluded.sum()) != 102:
+        raise AssertionError(
+            f"unexpected compact policy selection support: included={int(included.sum())}, "
+            f"excluded={int(excluded.sum())}"
+        )
+    exclusion_reason = selection["exclusion_reason_v11"].fillna("").astype(str).str.strip()
+    if not exclusion_reason.loc[excluded].ne("").all():
+        raise AssertionError("excluded compact policy rows must carry an exclusion reason")
+    if not exclusion_reason.loc[included].eq("").all():
+        raise AssertionError("included compact policy rows must not carry an exclusion reason")
+
     for relative in REQUIRED:
         path = REPOSITORY / relative
         if path.stat().st_size >= 100 * 1024 * 1024:
             raise AssertionError(f"single file exceeds normal Git limit: {relative}")
 
     local_hits: list[str] = []
-    for path in REPOSITORY.rglob("*"):
-        if not path.is_file() or any(part.startswith("recomputed_") for part in path.relative_to(REPOSITORY).parts) or _is_generated_compiler_artifact(path):
+    text_files, virtual_env_roots = _iter_public_text_files()
+    for path in text_files:
+        if _is_generated_compiler_artifact(path):
             continue
         if path.resolve() == Path(__file__).resolve():
-            continue
-        if path.suffix.lower() not in {".csv", ".json", ".geojson", ".md", ".py", ".txt", ".cff", ".bib"}:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         if ABSOLUTE.search(text):
@@ -133,7 +233,7 @@ def main() -> None:
     if local_hits:
         raise AssertionError(f"absolute local paths remain in: {local_hits}")
 
-    found_forbidden = [str(path.relative_to(REPOSITORY)) for path in REPOSITORY.rglob("*") if path.name in FORBIDDEN_NAMES]
+    found_forbidden = [str(path.relative_to(REPOSITORY)) for path in text_files if path.name in FORBIDDEN_NAMES]
     if found_forbidden:
         raise AssertionError(f"restricted/raw intermediate names found: {found_forbidden}")
 
@@ -151,6 +251,8 @@ def main() -> None:
         "policy_rows": int(len(policy)),
         "policy_cities": int(policy["city_key"].nunique()),
         "required_paths": len(REQUIRED),
+        "compact_policy_selection_rows": int(len(selection)),
+        "virtual_environment_roots_skipped": [str(path.relative_to(REPOSITORY)) for path in virtual_env_roots],
     }, ensure_ascii=False))
 
 

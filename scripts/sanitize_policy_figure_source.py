@@ -51,13 +51,16 @@ def main() -> None:
         frame.to_csv(path, index=False, encoding="utf-8-sig")
         print(path.relative_to(REPOSITORY))
 
-    audit = REPOSITORY / "data" / "results" / "reference" / "policy" / "covid_model_sample_audit_v11.csv"
-    frame = pd.read_csv(audit, encoding="utf-8-sig", low_memory=False)
-    drop = [c for c in frame.columns if "source_path" in c.lower() or "absolute" in c.lower()]
-    if drop:
-        frame = frame.drop(columns=drop)
-    frame.to_csv(audit, index=False, encoding="utf-8-sig")
-    print(audit.relative_to(REPOSITORY), "dropped", len(drop), "local path columns")
+    selection = REPOSITORY / "data" / "results" / "reference" / "policy" / "covid_model_sample_selection_v11.csv"
+    if selection.exists():
+        frame = pd.read_csv(selection, encoding="utf-8-sig", low_memory=False)
+        drop = [c for c in frame.columns if "source_path" in c.lower() or "absolute" in c.lower()]
+        if drop:
+            frame = frame.drop(columns=drop)
+            frame.to_csv(selection, index=False, encoding="utf-8-sig")
+        print(selection.relative_to(REPOSITORY), "dropped", len(drop), "local path columns")
+    else:
+        print(selection.relative_to(REPOSITORY), "not present; no sample-selection rewrite needed")
 
 
 if __name__ == "__main__":

@@ -1,11 +1,13 @@
 """Fit the six policy-background service-conversion models.
 
-The public entry point reads the column-reduced, eligible policy-model input
-under ``data/processed``. The same complete sample and design matrix are used
-for the three outcomes (N, A and I) under the base and COVID-adjusted
-specifications. The adjusted specification adds the observed-date Oxford
-stringency exposure divided by 10. GDP, area, jackknife, and bootstrap
-estimates are not part of this estimator.
+    The public entry point reads the column-reduced policy-model input under
+    ``data/processed``. The same complete eligible sample and design matrix are
+    used for the three outcomes (N, A and I) under the base and COVID-adjusted
+    specifications. The adjusted specification adds the observed-date Oxford
+    stringency exposure divided by 10. GDP, area, jackknife, and bootstrap
+    estimates are not part of this estimator. The public input is a frozen
+    325-row model input; this script does not reconstruct the upstream 427-row
+    candidate construction.
 
 The estimator is a QR OLS solve with province-clustered CR1 covariance,
 using ``Gp/(Gp-1) * (n-1)/(n-K)`` and t(Gp-1) intervals.  ``K`` is the full
@@ -36,6 +38,9 @@ REPOSITORY = HERE.parents[2]
 OUTPUT = REPOSITORY / "data" / "results" / "recomputed_policy"
 OUTPUT.mkdir(parents=True, exist_ok=True)
 PUBLIC_INPUT = REPOSITORY / "data" / "processed" / "policy_model_input.csv"
+MODEL_INPUT_ROWS_OUTPUT = OUTPUT / "covid_model_input_rows_v11.csv"
+ELIGIBLE_ROWS_OUTPUT = OUTPUT / "covid_model_eligible_rows_v11.csv"
+SAMPLE_CHECK_OUTPUT = OUTPUT / "covid_model_reestimated_sample_check_v11.csv"
 
 OUTCOMES = ("N", "A", "I")
 SPECS = ("C0", "C1")
@@ -228,12 +233,13 @@ def covid_completeness(panel: pd.DataFrame) -> tuple[pd.Series, pd.Series, str]:
 
 
 def load_sample() -> tuple[pd.DataFrame, dict[str, Any]]:
-    """Read the redistributable frozen S_COVID model input.
+    """Read the redistributable frozen policy-model input.
 
-    The source build performed the charging/policy joins and coverage checks. This
-    public entry point receives only the resulting eligible rows and keeps the
-    row-level flags needed to audit the sample.  It never reads or reconstructs
-    the restricted policy corpus.
+    The source build performed the charging/policy joins and coverage checks. The
+    public entry point receives the resulting model-input rows and applies only
+    deterministic completeness checks needed for the six-model re-estimation. It
+    never reads or reconstructs the restricted policy corpus or the upstream
+    candidate audit.
     """
 
     if not PUBLIC_INPUT.exists():
@@ -264,36 +270,35 @@ def load_sample() -> tuple[pd.DataFrame, dict[str, Any]]:
     for col in numeric_cols:
         frame[col] = numeric(frame[col])
     frame["covid_exposure_complete_v11"] = boolish(frame["covid_exposure_complete_v11"])
-    frame["covid_candidate_year_le_2022_v11"] = frame["year"].le(2022)
-    frame["covid_candidate_S427_v11"] = True
-    frame["covid_candidate_v11"] = frame["covid_candidate_year_le_2022_v11"]
-    frame["covid_model_eligible_v11"] = boolish(frame["covid_model_eligible_v11"])
-    frame["covid_model_eligible_v11"] &= frame["covid_candidate_v11"] & frame["covid_exposure_complete_v11"]
+    frame["model_input_row_v11"] = True
+    frame["model_input_eligible_flag_v11"] = boolish(frame["covid_model_eligible_v11"])
+    frame["eligible_row_v11"] = frame["model_input_eligible_flag_v11"]
+    frame["eligible_row_v11"] &= frame["covid_exposure_complete_v11"]
     frame["covid_model_exclusion_reason_v11"] = ""
-    frame.loc[~frame["covid_candidate_v11"], "covid_model_exclusion_reason_v11"] = "year_after_2022"
-    frame.loc[frame["covid_candidate_v11"] & ~frame["covid_exposure_complete_v11"], "covid_model_exclusion_reason_v11"] = "incomplete_public_input_flag"
+    frame.loc[~frame["model_input_eligible_flag_v11"], "covid_model_exclusion_reason_v11"] = "ineligible_public_input_flag"
+    frame.loc[~frame["covid_exposure_complete_v11"], "covid_model_exclusion_reason_v11"] = "incomplete_public_input_flag"
     complete_controls = frame[[*POLICY, *BASE_CONTROLS, "log_N_v10", "log_A_v10", "log_I_v10", COVID_RAW]].notna().all(axis=1)
-    frame["covid_model_eligible_v11"] &= complete_controls
+    frame["eligible_row_v11"] &= complete_controls
     frame.loc[~complete_controls, "covid_model_exclusion_reason_v11"] = "missing_model_X_or_Y"
     frame.sort_values(["city_key", "year", "analysis_row_id"], inplace=True)
     frame.reset_index(drop=True, inplace=True)
-    eligible = frame.loc[frame["covid_model_eligible_v11"]].copy()
+    eligible = frame.loc[frame["eligible_row_v11"]].copy()
     eligible[COVID_SCALED] = eligible[COVID_RAW] / 10.0
     eligible["sample_id_v11"] = "S_COVID"
     if eligible.empty:
         raise ValueError("No eligible rows in policy_model_input.csv")
     support = {
-        "candidate_rows_S427_year_le_2022": int(frame["covid_candidate_v11"].sum()),
-        "candidate_cities": int(frame.loc[frame["covid_candidate_v11"], "city_key"].nunique()),
+        "model_input_rows": int(len(frame)),
+        "model_input_cities": int(frame["city_key"].nunique()),
         "eligible_rows": int(len(eligible)),
         "eligible_cities": int(eligible["city_key"].nunique()),
         "eligible_provinces": int(eligible["province"].nunique()),
         "at_least_two_years_cities": int(eligible["city_key"].value_counts().ge(2).sum()),
         "R_switch_cities": int(_switch_cities(eligible, POLICY[0])),
         "S_switch_cities": int(_switch_cities(eligible, POLICY[1])),
-        "excluded_candidate_rows": int(frame["covid_candidate_v11"].sum() - len(eligible)),
-        "completeness_source": "eligible_flag_in_public_input",
-        "sample_changed_by_source_gap": False,
+        "excluded_model_input_rows": int(len(frame) - len(eligible)),
+        "completeness_source": "public_model_input_flags_and_required_fields",
+        "upstream_candidate_audit_used": False,
     }
     return eligible, {"audit_frame": frame, "support": support, "completeness_source": support["completeness_source"]}
 
@@ -445,7 +450,7 @@ def spec_table(frame: pd.DataFrame, samples: Mapping[str, pd.DataFrame]) -> tupl
                     "model_id": f"COVID_{spec_id}_{outcome}",
                     "outcome": outcome,
                     "sample_id": "S_COVID",
-                    "sample_rule": "V10 S427 and year<=2022 and compatible-date COVID exposure complete",
+                    "sample_rule": "Frozen public policy_model_input.csv rows with complete outcomes, controls, policy exposure, and COVID exposure",
                     "formula": formula,
                     "outcome_definition": {"N": "log(E/W)", "A": "log(Q/W)", "I": "log(Q/E)"}[outcome],
                     "policy_terms": "+".join(POLICY),
@@ -727,8 +732,8 @@ def model_comparison(results: pd.DataFrame) -> pd.DataFrame:
 def support_tables(audit: pd.DataFrame, eligible: pd.DataFrame, support: Mapping[str, Any]) -> pd.DataFrame:
     rows: list[dict[str, Any]] = []
     for key, value in support.items():
-        rows.append({"support_group": "S_COVID", "metric": key, "value": value, "n": len(eligible), "cities": eligible.city_key.nunique(), "provinces": _province_cluster(eligible).nunique(), "notes": "actual sample; candidate/source-gap differences retained"})
-    reason_counts = audit.loc[audit["covid_candidate_v11"] & ~audit["covid_model_eligible_v11"], "covid_model_exclusion_reason_v11"].value_counts(dropna=False)
+        rows.append({"support_group": "S_COVID", "metric": key, "value": value, "n": len(eligible), "cities": eligible.city_key.nunique(), "provinces": _province_cluster(eligible).nunique(), "notes": "actual public model-input and eligible-row support"})
+    reason_counts = audit.loc[~audit["eligible_row_v11"], "covid_model_exclusion_reason_v11"].value_counts(dropna=False)
     for reason, count in reason_counts.items():
         rows.append({"support_group": "exclusion", "metric": "excluded_rows_by_reason", "value": int(count), "n": len(eligible), "cities": np.nan, "provinces": np.nan, "notes": str(reason)})
     for term in POLICY:
@@ -812,11 +817,17 @@ def main(*, force_fit: bool = False) -> dict[str, Any]:
     support.to_csv(OUTPUT / "covid_model_support_v11.csv", index=False, encoding="utf-8-sig")
     identity = identity_table(results)
     identity.to_csv(OUTPUT / "covid_model_identity_v11.csv", index=False, encoding="utf-8-sig")
-    # The model sample is the actual selected S_COVID frame, not a synthetic
-    # reconstruction.  The complete candidate audit is included in the same
-    # file as a separate CSV so exclusions are recoverable without refitting.
-    frame.to_csv(OUTPUT / "covid_model_sample_v11.csv", index=False, encoding="utf-8-sig")
-    info["audit_frame"].to_csv(OUTPUT / "covid_model_sample_audit_v11.csv", index=False, encoding="utf-8-sig")
+    # Keep the three row-level artifacts semantically distinct. The first is
+    # the frozen public input, the second is the deterministic eligible subset,
+    # and the third is the exact sample passed to both specifications. None is
+    # an upstream candidate audit or a reconstruction of the 427-row source.
+    info["audit_frame"].loc[info["audit_frame"]["model_input_row_v11"]].to_csv(
+        MODEL_INPUT_ROWS_OUTPUT, index=False, encoding="utf-8-sig"
+    )
+    info["audit_frame"].loc[info["audit_frame"]["eligible_row_v11"]].to_csv(
+        ELIGIBLE_ROWS_OUTPUT, index=False, encoding="utf-8-sig"
+    )
+    samples["C0"].to_csv(SAMPLE_CHECK_OUTPUT, index=False, encoding="utf-8-sig")
     history_payload = {"math_version": MATH_VERSION, "records": history}
     write_json(OUTPUT / "model_execution_history_v11.json", history_payload)
     # A plainly named alias is useful to downstream validators; both files
@@ -842,9 +853,14 @@ def main(*, force_fit: bool = False) -> dict[str, Any]:
         "guardrails": {"same_sample_C0_C1": True, "same_X_three_outcomes": True, "no_GDP_or_area": True, "no_JK_or_bootstrap": True, "full_rank_checked": True, "covid_residual_identification_checked": True, "synthetic_covariance_shape_checked": synthetic["passed"]},
         "inputs": {"public_policy_model_input": rel(PUBLIC_INPUT), "public_policy_model_input_sha256": sha256(PUBLIC_INPUT)},
         "outputs": {p.name: {"path": rel(p), "size_bytes": int(p.stat().st_size)} for p in OUTPUT.glob("covid_model_*.csv")},
+        "row_artifacts": {
+            "model_input_rows": rel(MODEL_INPUT_ROWS_OUTPUT),
+            "eligible_rows": rel(ELIGIBLE_ROWS_OUTPUT),
+            "reestimated_sample_check": rel(SAMPLE_CHECK_OUTPUT),
+        },
     }
     write_json(OUTPUT / "model_metadata_v11.json", metadata)
-    print(json.dumps({"fit_mode": fit_mode, "S_COVID_rows": len(frame), "S_COVID_cities": frame.city_key.nunique(), "S_COVID_provinces": _province_cluster(frame).nunique(), "models": 6, "actual_solves_this_run": metadata["execution_counts"]["main_model_fits_this_run"]}, ensure_ascii=False))
+    print(json.dumps({"fit_mode": fit_mode, "model_input_rows": info["support"]["model_input_rows"], "eligible_rows": len(samples["C0"]), "eligible_cities": samples["C0"].city_key.nunique(), "eligible_provinces": _province_cluster(samples["C0"]).nunique(), "models": 6, "actual_solves_this_run": metadata["execution_counts"]["main_model_fits_this_run"]}, ensure_ascii=False))
     return metadata
 
 

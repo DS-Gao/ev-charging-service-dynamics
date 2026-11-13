@@ -31,7 +31,6 @@
   },
   "actual_fit_count": 5,
   "fit_attempts_total": 10,
-  "fit_attempt_history_path": "data/results/reference/quarterly/quarterly_dynamic_fit_attempt_history_v18.json",
   "bootstrap": false,
   "lag_search": false,
   "output_files": [
@@ -47,7 +46,6 @@
     "quarterly_covid_comparison_v18.csv",
     "dynamic_findings_v18.md",
     "quarterly_dynamic_diagnostics_v18.csv",
-    "quarterly_dynamic_run_v18.json",
-    "quarterly_dynamic_fit_attempt_history_v18.json"
+    "quarterly_dynamic_run_v18.json"
   ]
 }

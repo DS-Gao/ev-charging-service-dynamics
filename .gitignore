@@ -14,8 +14,6 @@ data/results/recomputed_*/
 *.blg
 *.out
 *.toc
-manuscript/*_compile_*.txt
-manuscript/compile_record.json
 
 # Editors and operating-system files
 .DS_Store
