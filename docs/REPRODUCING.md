@@ -183,3 +183,13 @@ metadata/input files, and the absence of obvious credential/browser artifacts.
 It ignores Git-ignored recomputation output and virtual environments and does
 not perform a new scientific audit or assert that every source archive is
 currently reachable.
+
+## Complete-compatible-week comparison
+
+The descriptive support comparison is generated with:
+
+```powershell
+python scripts/compare_compatible_weeks.py
+```
+
+The script reads the repository annual panel and optional source-date support, reports the original 225-city comparison and the 167-city subset with W = 52 in 2022 and W = 53 in 2023, and writes a compact CSV below `data/results/recomputed_descriptive/`. Network intensity is `sum(A) / sum(N)`, not an unweighted city mean. This is an observation-support comparison, not a causal or nationwide estimate.

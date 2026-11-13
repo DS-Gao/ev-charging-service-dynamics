@@ -82,3 +82,7 @@ panel. Use this context crosswalk for province-date pandemic matching. The
 older charging-label crosswalk is retained for raw charging reconstruction;
 its province labels are not the pandemic-control join key. These files are
 derived metadata from the same cited source geometry and analysis registry.
+
+## Released-field scope
+
+The charging archive's `Total` and `cumulative_plugs` are used as the released activity and cumulative facility-indicator fields documented by the source. The public package does not establish an unknown anonymization algorithm or certify physical station, connector, power, capacity, uptime, or service-availability equivalence. Uniform scaling would preserve a percentage within a field, whereas city- or time-varying transformations could affect network shares or growth; those hypothetical properties are not asserted as facts. See `docs/FIELD_SOURCES.md` and the metadata tables for the exact scope.

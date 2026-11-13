@@ -1,0 +1,57 @@
+{
+  "annual_input_sha256": "d6917ffe08a9b375f3f285726fff6b99785701aa3d698875e0aaab5eef89c6b7",
+  "weekly_input_sha256": "31cead081a8a505840da6db0e13df045ddb947a54f3ec98e27d74384ad38228e",
+  "years": [
+    2022,
+    2023
+  ],
+  "source_meta": {
+    "weekly_source_rows": 35070,
+    "weekly_source_cities": 334,
+    "weekly_source_date_min": "2022-01-02",
+    "weekly_source_date_max": "2023-12-31",
+    "weekly_reconstruction_matches_annual": true,
+    "source_date_rule": "parsed source date; compatible iff cumulative_plugs > 0; Total=0 retained"
+  },
+  "summary": [
+    {
+      "scope": "original_endpoint",
+      "city_count": 225,
+      "year_start": 2022,
+      "year_end": 2023,
+      "complete_week_rule": "all endpoint rows",
+      "activity_growth_pct": 15.3218024383,
+      "facility_growth_pct": 45.7046099375,
+      "network_intensity_growth_pct": -20.8523309676,
+      "sum_A_2022": 8107848.885827489,
+      "sum_A_2023": 9350117.474111412,
+      "sum_N_2022": 31453.7515713396,
+      "sum_N_2023": 45829.5660377359,
+      "network_I_2022": 257.7704878046,
+      "network_I_2023": 204.0193325508
+    },
+    {
+      "scope": "complete_compatible_week",
+      "city_count": 167,
+      "year_start": 2022,
+      "year_end": 2023,
+      "complete_week_rule": "W_2022=52 and W_2023=53",
+      "activity_growth_pct": 14.7352581907,
+      "facility_growth_pct": 45.0628510796,
+      "network_intensity_growth_pct": -20.9065192523,
+      "sum_A_2022": 8029943.971466136,
+      "sum_A_2023": 9213176.948232474,
+      "sum_N_2022": 31041.7692307692,
+      "sum_N_2023": 45030.0754716981,
+      "network_I_2022": 258.681904107,
+      "network_I_2023": 204.6005220227
+    }
+  ],
+  "member_rows_by_scope": {
+    "original_endpoint": 225,
+    "complete_compatible_week": 167
+  },
+  "network_intensity_definition": "sum(A_i)/sum(N_i), not mean(I_i)",
+  "models_reestimated": false,
+  "public_script": "scripts/compare_compatible_weeks.py"
+}

@@ -90,10 +90,7 @@ conditions are documented once in `docs/DATA_ACCESS.md`.
 
 ## Versioned release and citation
 
-The current research-materials release is
-[v1.1.0](https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.1.0).
-It contains the replication data, code, numeric references, figure-source
-tables, sample definitions, and source metadata used by the routes above.
+The proposed next research-materials release is v1.2.0 (publication URL will be added after the release is created). It retains the fixed v1.1.0 baseline and adds field-source definitions, a policy-construction crosswalk, affected figure-label reproduction code, and a complete-compatible-week comparison. The repository must not be cited as v1.2.0 until that tag exists.
 
 Cite the release with [CITATION.cff](CITATION.cff). Original code in `src/` and
 `scripts/` is under the [MIT License](LICENSE); original repository
@@ -102,3 +99,7 @@ summaries are under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Third-party data,
 geometry, excerpts, and derived source content retain their own terms; see
 `THIRD_PARTY_SOURCES.md`, `metadata/data_sources.csv`, and
 `LICENSES/README.md` before redistribution.
+
+## Additional public materials
+
+The repository includes `docs/FIELD_SOURCES.md` and `docs/POLICY_METHODS.md` for released-field scope and the two-path policy construction. `scripts/compare_compatible_weeks.py` generates the saved 225-city reference and the 167-city complete-compatible-week comparison from repository inputs; it does not refit a model or infer source anonymization properties.
