@@ -1,4 +1,4 @@
-﻿variable,source_field,definition,unit,frequency,analysis_use
+variable,source_field,definition,unit,frequency,analysis_use
 Q,Total,Sum of activity over compatible source dates,released activity units,city-year or city-quarter,Descriptive and facility/activity models
 E,cumulative_plugs,Sum of the facility indicator over the same compatible dates,facility-indicator weeks,city-year or city-quarter,Descriptive and facility/activity models
 W,source date,Number of compatible weeks with valid date and positive facility indicator,weeks,city-year or city-quarter,Descriptive and facility/activity models
@@ -12,8 +12,8 @@ Temperature,T2M,Annual daily mean with >=95% calendar coverage,degrees C,city-ye
 Precipitation,PRECTOTCORR,"Annual sum, complete calendar; no scaling of incomplete years",mm/year,city-year,Annual facility-activity and policy-association models
 Wind,WS10M,Annual daily mean with >=95% calendar coverage,m/s,city-year,Annual facility-activity and policy-association models
 Humidity,RH2M,Annual daily mean with >=95% calendar coverage,percent,city-year,Annual facility-activity and policy-association models
-R,Derived as defined in Supplementary Information,Information/supervision requirement observed by previous year end; unknown coverage distinct from observed absence,0/1 on eligible support,city-year,Annual policy association
-S,Derived as defined in Supplementary Information,Operation/maintenance requirement observed by previous year end; same coverage rule,0/1 on eligible support,city-year,Annual policy association
+R,Derived as defined in Supplementary Information,"Information/supervision responsibility observed by previous year end, including platform connection, reporting, interoperability, monitoring and data sharing; unknown coverage distinct from observed absence",0/1 on eligible support,city-year,Annual policy association
+S,Derived as defined in Supplementary Information,"Operating-service responsibility observed by previous year end, including maintenance, fault response, continuity, availability, public access and service qualifications; broader than the operation-and-maintenance content group; unknown coverage distinct from observed absence",0/1 on eligible support,city-year,Annual policy association
 Lagged construction count,Derived as defined in Supplementary Information,"Count of construction-support policy documents assigned to the previous year. Use the later effective/publication year when both are known, the effective year alone when publication year is unknown, and unknown timing when effective year is unknown; not cumulative stock.",documents,city-year,Annual policy association
 Response index,StringencyIndex_Average,Mean on compatible source dates; pre-2020 structural zero; divided by 10 in regression,index points (0-100); regression per 10 points,province-day to city-year/quarter,Annual policy and quarterly paired comparison
 Observation state,Derived as defined in Supplementary Information,Compatible source-coded zero retained; no compatible weeks means missing ratios; zero does not certify physical inactivity,categorical,city-year/quarter,All measurements and sample definitions

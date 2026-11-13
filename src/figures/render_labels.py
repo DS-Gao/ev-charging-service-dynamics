@@ -15,6 +15,7 @@ import json
 import os
 from pathlib import Path
 from typing import Iterable
+from render_figure_corrections import _revise_fig4_correction, _revise_fig8_correction
 
 
 DISPLAY_BOUND = 3.503090
@@ -345,7 +346,8 @@ def _revision_hook(renderer):
     original_save = renderer.save_figure
 
     def save_figure(fig, stem: str) -> None:
-        _replace_visible_text(fig, replacements)
+        if stem not in {"fig4_regimes", "fig7_quarterly_dynamic"}:
+            _replace_visible_text(fig, replacements)
         if stem == "fig1_coverage":
             _revise_fig1_labels(fig)
         elif stem == "fig2_observation":
@@ -353,13 +355,13 @@ def _revision_hook(renderer):
         elif stem == "fig3_growth":
             _revise_fig3_labels(fig)
         elif stem == "fig4_regimes":
-            _add_fig4_explanation(fig, renderer)
+            _revise_fig4_correction(fig, renderer)
         elif stem == "fig5_contributions":
             _revise_fig5_contributions(fig)
         elif stem == "fig6_recording":
             _revise_fig6_recording(fig)
         elif stem == "fig7_quarterly_dynamic":
-            _revise_fig7_quarterly(fig)
+            _revise_fig8_correction(fig)
         elif stem == "fig8_policy":
             _revise_fig8_policy(fig)
         original_save(fig, stem)

@@ -61,7 +61,7 @@ python scripts/validate_package.py
 | `docs/REPRODUCING.md` | Commands, input contracts, saved-result versus refit boundaries, and numeric reading/rebuild guidance. |
 | `docs/DATA_ACCESS.md` | First-party source links, access conditions, and redistribution limits. |
 
-`metadata/figure_table_map.csv` retains 56 reported figure/table entries. Each
+`metadata/figure_table_map.csv` records 58 reported figure/table entries from the final compiled labels (7 main tables, 9 main figures, 33 supplementary tables, and 9 supplementary figures). Each
 row points directly to its numeric reference or figure-source inputs and names
 the public redraw/read route; it contains no manuscript-source or PDF path.
 `metadata/sample_definitions.csv`, `metadata/variable_dictionary.csv`, and
@@ -90,7 +90,7 @@ conditions are documented once in `docs/DATA_ACCESS.md`.
 
 ## Versioned release and citation
 
-The proposed next research-materials release is v1.2.0 (publication URL will be added after the release is created). It retains the fixed v1.1.0 baseline and adds field-source definitions, a policy-construction crosswalk, affected figure-label reproduction code, and a complete-compatible-week comparison. The repository must not be cited as v1.2.0 until that tag exists.
+Research-materials release [v1.2.1](https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.1) retains the fixed v1.2.0 baseline and updates the public field-scale note, broad policy-responsibility dictionary, affected Figure 4 and Figure 8 renderer, and the 58-row final figure/table map. The release contains replication code, processed inputs, saved numeric results, and metadata only.
 
 Cite the release with [CITATION.cff](CITATION.cff). Original code in `src/` and
 `scripts/` is under the [MIT License](LICENSE); original repository

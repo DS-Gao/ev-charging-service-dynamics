@@ -158,8 +158,8 @@ responses, or bundled coded inputs; no credentials or browser data are read.
 
 ## Result and figure map
 
-`metadata/figure_table_map.csv` retains 56 main and supplementary figure/table
-entries. Each row points directly to its numeric reference or figure-source
+`metadata/figure_table_map.csv` records 58 main and supplementary figure/table
+entries from the final compiled labels. Each row points directly to its numeric reference or figure-source
 inputs and names the code used for a saved numeric read or redraw. It contains
 no manuscript-source or PDF path. `metadata/sample_definitions.csv` maps the
 model and descriptive samples to their members and rules. Full covariance

@@ -56,21 +56,22 @@ not document how such a transformation treats zeros or cumulative values.
 These are possible effects to distinguish, not assertions about the actual
 release process:
 
-* A common factor applied consistently to a field leaves within-city percentage
-  growth and relative cross-city weights unchanged, although the reported unit
-  changes.
-* A fixed city factor can leave a city's growth unchanged while changing
-  cross-city levels, facility weights and facility-weighted network aggregates.
-* A time-varying factor can change growth, weights and network comparisons.
+* A common factor applied consistently to the activity field (`A` or `Q`)
+  changes activity units but leaves the `N`-based facility weights unchanged.
+* A city-specific factor applied to the facility indicator (`N` or `E`) can
+  change cross-city facility levels, facility weights and facility-weighted
+  network aggregates.
+* Time-varying activity factors can change activity growth and intensity;
+  activity-only changes leave the `N`-based facility weights unchanged, while
+  time-varying facility factors can additionally change facility weights.
 
-City fixed effects and PPML do not certify that the released indicators retain
-any of these properties. Fixed effects can absorb an appropriate time-invariant
-multiplicative component under the fitted model, but city-specific outcome
-scaling can still change facility weights and pseudo-likelihood estimating
-equations; time-varying transformations can affect coefficients and descriptive
-aggregates. Results are therefore described as comparisons of released,
-observed-network indicators, not as independently certified physical totals or
-shares of the operator's complete network or the complete public network.
+Activity scaling can also change aggregate intensity (`Q/E`) and the
+observation contributions to a PPML pseudo-likelihood. Facility scaling can
+change the facility-weighted denominator itself. City fixed effects and PPML
+do not certify any of these properties, so results remain comparisons of
+released, observed-network indicators rather than independently certified
+physical totals or shares of the operator's complete network or the complete
+public network.
 
 The cumulative facility indicator is not interpreted as online capacity, power,
 connector count, uptime or service reliability. A source-coded zero is retained
