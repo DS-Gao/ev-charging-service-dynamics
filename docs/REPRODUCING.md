@@ -193,3 +193,5 @@ python scripts/compare_compatible_weeks.py
 ```
 
 The script reads the repository annual panel and optional source-date support, reports the original 225-city comparison and the 167-city subset with W = 52 in 2022 and W = 53 in 2023, and writes a compact CSV below `data/results/recomputed_descriptive/`. Network intensity is `sum(A) / sum(N)`, not an unweighted city mean. This is an observation-support comparison, not a causal or nationwide estimate.
+
+The recommended saved-results wrapper calls `quick_figures.py --released-scale-labels` and produces all 18 final figures from saved values. The unflagged low-level `quick_figures.py` route retains historical display styling.

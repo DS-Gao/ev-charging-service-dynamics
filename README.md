@@ -90,7 +90,7 @@ conditions are documented once in `docs/DATA_ACCESS.md`.
 
 ## Versioned release and citation
 
-Research-materials release [v1.2.3](https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.3) retains the fixed v1.2.0 baseline and updates the public field-scale note, broad policy-responsibility dictionary, affected Figure 4 and Figure 8 renderer, and the 58-row final figure/table map. The release contains replication code, processed inputs, saved numeric results, and metadata only.
+Research-materials release [v1.2.4](https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.4) retains the fixed v1.2.0 baseline and updates the public field-scale note, broad policy-responsibility dictionary, affected Figure 4 and Figure 8 renderer, and the 58-row final figure/table map. The release contains replication code, processed inputs, saved numeric results, and metadata only.
 
 Cite the release with [CITATION.cff](CITATION.cff). Original code in `src/` and
 `scripts/` is under the [MIT License](LICENSE); original repository
@@ -105,3 +105,5 @@ geometry, excerpts, and derived source content retain their own terms; see
 The repository includes `docs/FIELD_SOURCES.md` and `docs/POLICY_METHODS.md` for released-field scope and the two-path policy construction. `scripts/compare_compatible_weeks.py` generates the saved 225-city reference and the 167-city complete-compatible-week comparison from repository inputs; it does not refit a model or infer source anonymization properties.
 
 The final-label redraw command is `python scripts/quick_figures.py --released-scale-labels`; it uses saved values without fitting models.
+
+The recommended saved-results wrapper calls `quick_figures.py --released-scale-labels` and produces all 18 final figures from saved values. The unflagged low-level `quick_figures.py` route retains historical display styling.

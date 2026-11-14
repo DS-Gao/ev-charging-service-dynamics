@@ -8,3 +8,5 @@ Policy evidence was coded at clause level and linked to document and city identi
 - Broad registry path: 345/183/80 R and 132/77/43 S (clauses/documents/cities).
 - Bounded checks: 220 directed first-record rows; 127 rows with completed recorded check status; 37 correction records; 7 removed clauses; a prior content check covered 58 labelled rows corresponding to 52 independent source fragments. These scopes do not estimate full-corpus accuracy.
 - AI assistance was used for contextual reading of retained policy sentences against the stated rules; this does not constitute human expert or double-independent validation.
+
+The historical machine identifiers `S_prev_observed_v9` and `policy_operation_maintenance` map to broad operating-service responsibility, including maintenance, fault response, continuity, availability, public access and service qualifications. They are distinct from the narrower operation-and-maintenance content category.

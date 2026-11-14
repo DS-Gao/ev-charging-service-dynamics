@@ -14,8 +14,8 @@ from pathlib import Path
 REPOSITORY = Path(__file__).resolve().parents[1]
 
 
-def _run(relative: str) -> None:
-    command = [sys.executable, relative]
+def _run(relative: str, *arguments: str) -> None:
+    command = [sys.executable, relative, *arguments]
     print("$", " ".join(command), flush=True)
     subprocess.run(command, cwd=REPOSITORY, check=True)
 
@@ -31,7 +31,7 @@ def main(argv: list[str] | None = None) -> int:
         )
     elif supplied:
         raise SystemExit(f"unrecognized option(s): {' '.join(supplied)}")
-    _run("scripts/quick_figures.py")
+    _run("scripts/quick_figures.py", "--released-scale-labels")
     print("saved-result route complete", flush=True)
     return 0
 

@@ -5,9 +5,9 @@ type: software
 authors:
   - family-names: Gao
     given-names: Dongsheng
-version: 1.2.3
+version: 1.2.4
 date-released: 2026-11-13
 repository-code: "https://github.com/DS-Gao/ev-charging-service-dynamics"
-url: "https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.3"
+url: "https://github.com/DS-Gao/ev-charging-service-dynamics/releases/tag/v1.2.4"
 license: "MIT AND CC-BY-4.0"
 abstract: "Replication code and materials for a city-level study of electric vehicle charging facility expansion, recorded activity and operational policy responsibilities. MIT applies to original code; repository documentation, numeric figure sources, metadata, and saved statistical materials use CC BY 4.0; third-party materials retain their source terms. Manuscript source, author records, internal reviews, and restricted policy full text are not included in this release."

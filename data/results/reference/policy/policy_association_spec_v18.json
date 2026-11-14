@@ -126,21 +126,23 @@
       ]
     },
     "S_prev_observed": {
-      "scientific_name": "prior-year-end observed operation and maintenance responsibility exposure",
-      "indicator_definition": "1 when a qualifying operation/maintenance responsibility was observed by the end of the preceding calendar year; 0 otherwise in the observed support",
+      "scientific_name": "prior-year-end observed operating-service responsibility exposure",
+      "indicator_definition": "1 when a qualifying operating-service responsibility was observed by the end of the preceding calendar year; 0 otherwise in the observed support; unknown coverage remains missing",
       "included_functions": [
         "maintenance operations",
         "fault repair response",
         "availability or normal operation",
         "emergency continuity",
-        "operation-maintenance-related operator qualification"
+        "public access",
+        "operating-service qualifications"
       ],
       "not_equivalent_to": [
         "implementation intensity",
         "compliance",
         "service volume",
         "a continuous policy-strength score"
-      ]
+      ],
+      "historical_machine_field_mapping": "S_prev_observed_v9 and policy_operation_maintenance identify this broad operating-service responsibility construct; they do not denote only the narrower operation-and-maintenance content category."
     },
     "S427_condition_expanded": "The source common annual panel starts from a 334-city calendar-year frame. A row enters the 427-row common set only when facility additions have an eligible source status, compatible Q is observed, compatible I is positive, lagged construction and operation-policy controls are known, and all four annual weather controls are finite. The paired timing rule also requires the later-date lagged B and O controls; the retained identifiers satisfy this intersection. The source construction preserves Q, E, and W as positive compatible-week quantities and requires R and S exposure timing and local-coverage statuses to be observed and time-known; unknown coverage is not recoded as zero. For the annual policy comparison, these identifiers are restricted to years 2016--2022 and finite, complete source-date COVID exposure. Pre-COVID structural zeros are accepted as complete; source gaps are not filled. The resulting selected sample contains 325 rows with finite log(Q/W), log(E/W), and log(Q/E), complete policy and weather controls, and no candidate-row exclusions."
   },
